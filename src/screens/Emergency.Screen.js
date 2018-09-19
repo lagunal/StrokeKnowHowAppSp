@@ -28,7 +28,7 @@ class EmergencyScreen extends Component {
 
     handleEmergency = () => {
       this.props.navigator.push({
-        screen: "StrokeApp.EmergencyToolkitScreen",
+        screen: "strokeAppSp.EmergencyToolkitScreen",
       });
     }
 

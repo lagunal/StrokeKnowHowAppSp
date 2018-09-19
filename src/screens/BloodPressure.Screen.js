@@ -21,7 +21,7 @@ class BloodPressureScreen extends Component {
     
     handlePhysical = () => {
       this.props.navigator.push({
-        screen: "StrokeApp.PhysicalToolkitScreen",
+        screen: "strokeAppSp.PhysicalToolkitScreen",
       });
     }
 

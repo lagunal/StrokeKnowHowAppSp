@@ -28,12 +28,12 @@ class WeeklyPlanScreen extends Component {
 
   handleHelpNeeded = () => {
       this.props.navigator.push({
-        screen: "StrokeApp.HelpNeededToolkitScreen",
+        screen: "strokeAppSp.HelpNeededToolkitScreen",
       });
   }
   handleSchedule = () => {
     this.props.navigator.push({
-      screen: "StrokeApp.ScheduleToolkitScreen",
+      screen: "strokeAppSp.ScheduleToolkitScreen",
     });
   }
 

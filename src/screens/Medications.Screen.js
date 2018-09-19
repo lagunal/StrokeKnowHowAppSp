@@ -24,7 +24,7 @@ class MedicationsScreen extends Component {
 
     handleMedication = () => {
       this.props.navigator.push({
-        screen: "StrokeApp.MedicationsToolkitScreen",
+        screen: "strokeAppSp.MedicationsToolkitScreen",
       });
     }
 

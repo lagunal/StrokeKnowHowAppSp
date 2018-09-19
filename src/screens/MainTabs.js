@@ -13,26 +13,26 @@ const startTabs = () => {
         Navigation.startTabBasedApp({
             tabs: [
                 {
-                    screen: "StrokeApp.HomeScreen",
+                    screen: "strokeAppSp.HomeScreen",
                     label: "Home",
                     title: "Home",
                     icon: sources[0],
                     
                 },
                 {
-                    screen: "StrokeApp.ContentsScreen",
+                    screen: "strokeAppSp.ContentsScreen",
                     label: "Contents",
                     title: "Contents",
                     icon: sources[2],
                 },
                 {
-                    screen: "StrokeApp.ToolkitHomeScreen",
+                    screen: "strokeAppSp.ToolkitHomeScreen",
                     label: "Toolkits",
                     title: "Interactive Toolkits",
                     icon: sources[1],
                 },
                 {
-                    screen: "StrokeApp.ProfileScreen",
+                    screen: "strokeAppSp.ProfileScreen",
                     label: "Account",
                     icon: sources[3],
                     

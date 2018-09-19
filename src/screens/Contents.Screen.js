@@ -35,7 +35,7 @@ class ContentsScreen extends Component {
 
         <BodyScroll>
 
-            <TouchableOpacity onPress={() => this.handlePress('StrokeApp.NewDayScreen', 'New Day')}>
+            <TouchableOpacity onPress={() => this.handlePress('strokeAppSp.NewDayScreen', 'New Day')}>
                 <View style={styles.item}>
                     <Icon style={styles.icon} name="ios-home" size={30} md="md-home"></Icon>    
                     <MainText>
@@ -47,7 +47,7 @@ class ContentsScreen extends Component {
                 </View>
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={() => this.handlePress('StrokeApp.MovingSafelyScreen','Moving Safely')}>
+            <TouchableOpacity onPress={() => this.handlePress('strokeAppSp.MovingSafelyScreen','Moving Safely')}>
                 <View style={styles.item}> 
                     <Icon style={styles.icon} name="ios-alert" size={30} md="md-alert"></Icon>  
                     <MainText>
@@ -59,7 +59,7 @@ class ContentsScreen extends Component {
                 </View>
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={() => this.handlePress('StrokeApp.WeeklyPlanScreen','Weekly Plan')}>
+            <TouchableOpacity onPress={() => this.handlePress('strokeAppSp.WeeklyPlanScreen','Weekly Plan')}>
                 <View style={styles.item}> 
                 <Icon style={styles.icon} name="md-calendar" size={30} md="md-calendar"></Icon>
                     <MainText>
@@ -71,7 +71,7 @@ class ContentsScreen extends Component {
                 </View>    
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={() => this.handlePress('StrokeApp.MedicationsScreen','Medications')}>
+            <TouchableOpacity onPress={() => this.handlePress('strokeAppSp.MedicationsScreen','Medications')}>
                 <View style={styles.item}> 
                 <Icon style={styles.icon} name="ios-medkit" size={30} md="md-medkit"></Icon>
                     <MainText>
@@ -83,7 +83,7 @@ class ContentsScreen extends Component {
                 </View>    
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={() => this.handlePress('StrokeApp.BladderControlScreen','Bladder Control')}>
+            <TouchableOpacity onPress={() => this.handlePress('strokeAppSp.BladderControlScreen','Bladder Control')}>
                 <View style={styles.item}> 
                 <Icon style={styles.icon} name="ios-man" size={30} md="md-man"></Icon>
                     <MainText>
@@ -95,7 +95,7 @@ class ContentsScreen extends Component {
                 </View>    
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={() => this.handlePress('StrokeApp.BloodPressureScreen','Blood Pressure')}>
+            <TouchableOpacity onPress={() => this.handlePress('strokeAppSp.BloodPressureScreen','Blood Pressure')}>
                 <View style={styles.item}> 
                 <Icon style={styles.icon} name="ios-heart" size={30} md="md-heart"></Icon>
                     <MainText>
@@ -107,7 +107,7 @@ class ContentsScreen extends Component {
                 </View>    
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={() => this.handlePress('StrokeApp.RangeMotionScreen','Range of Motion')}>
+            <TouchableOpacity onPress={() => this.handlePress('strokeAppSp.RangeMotionScreen','Range of Motion')}>
                 <View style={styles.item}> 
                 <Icon style={styles.icon} name="ios-walk" size={30} md="md-walk"></Icon>
                     <MainText>
@@ -119,7 +119,7 @@ class ContentsScreen extends Component {
                 </View>    
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={() => this.handlePress('StrokeApp.SkinCareScreen','Skin Care')}>
+            <TouchableOpacity onPress={() => this.handlePress('strokeAppSp.SkinCareScreen','Skin Care')}>
                 <View style={styles.item}> 
                 <Icon style={styles.icon} name="ios-finger-print" size={30} md="md-finger-print"></Icon>
                     <MainText>
@@ -131,7 +131,7 @@ class ContentsScreen extends Component {
                 </View>
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={() => this.handlePress('StrokeApp.GettingUpScreen','Getting Up')}>
+            <TouchableOpacity onPress={() => this.handlePress('strokeAppSp.GettingUpScreen','Getting Up')}>
                 <View style={styles.item}> 
                 <Icon style={styles.icon} name="ios-happy" size={30} md="md-happy"></Icon>
                     <MainText>
@@ -143,7 +143,7 @@ class ContentsScreen extends Component {
                 </View>
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={() => this.handlePress('StrokeApp.BrainBodyScreen','Brain/Body')}>
+            <TouchableOpacity onPress={() => this.handlePress('strokeAppSp.BrainBodyScreen','Brain/Body')}>
                 <View style={styles.item}>
                 <Icon style={styles.icon} name="ios-body" size={30} md="md-body"></Icon>
                     <MainText>
@@ -155,7 +155,7 @@ class ContentsScreen extends Component {
                 </View>
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={() => this.handlePress('StrokeApp.EmergencyScreen','Emergency')}>
+            <TouchableOpacity onPress={() => this.handlePress('strokeAppSp.EmergencyScreen','Emergency')}>
                 <View style={styles.item}>
                 <Icon style={styles.icon} name="ios-warning" size={30} md="md-warning"></Icon>
                     <MainText>

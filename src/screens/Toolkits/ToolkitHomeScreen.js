@@ -20,27 +20,27 @@ class ToolkitHomeScreen extends Component {
 
   handlePressEmergency = () => {
     this.props.navigator.push({
-        screen: "StrokeApp.EmergencyToolkitScreen",
+        screen: "strokeAppSp.EmergencyToolkitScreen",
     });
   }
   handlePressMedications = () => {
     this.props.navigator.push({
-        screen: "StrokeApp.MedicationsToolkitScreen",
+        screen: "strokeAppSp.MedicationsToolkitScreen",
     });
   }
   handlePressHelpNeeded = () => {
     this.props.navigator.push({
-        screen: "StrokeApp.HelpNeededToolkitScreen",
+        screen: "strokeAppSp.HelpNeededToolkitScreen",
     });
   }
   handlePressPhysical = () => {
     this.props.navigator.push({
-        screen: "StrokeApp.PhysicalToolkitScreen",
+        screen: "strokeAppSp.PhysicalToolkitScreen",
     });
   }
   handlePressSchedule = () => {
     this.props.navigator.push({
-        screen: "StrokeApp.ScheduleToolkitScreen",
+        screen: "strokeAppSp.ScheduleToolkitScreen",
     });
   }
 

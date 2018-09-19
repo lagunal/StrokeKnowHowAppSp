@@ -107,31 +107,31 @@ class HomeScreen extends Component {
 
   handleHelpNeeded = () => {
     this.props.navigator.push({
-      screen: "StrokeApp.HelpNeededToolkitScreen",
+      screen: "strokeAppSp.HelpNeededToolkitScreen",
     });
   }
 
   handleSchedule = () => {
     this.props.navigator.push({
-      screen: "StrokeApp.ScheduleToolkitScreen",
+      screen: "strokeAppSp.ScheduleToolkitScreen",
     });
   }
 
   handleMedication = () => {
     this.props.navigator.push({
-      screen: "StrokeApp.MedicationsToolkitScreen",
+      screen: "strokeAppSp.MedicationsToolkitScreen",
     });
   }
 
   handlePhysical = () => {
     this.props.navigator.push({
-      screen: "StrokeApp.PhysicalToolkitScreen",
+      screen: "strokeAppSp.PhysicalToolkitScreen",
     });
   }
 
   handleEmergency = () => {
     this.props.navigator.push({
-      screen: "StrokeApp.EmergencyToolkitScreen",
+      screen: "strokeAppSp.EmergencyToolkitScreen",
     });
   }
 

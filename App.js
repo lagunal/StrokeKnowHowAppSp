@@ -37,28 +37,28 @@ import NewDayScreen from './src/screens/NewDay.Screen';
 import ProfileScreen from './src/screens/Profile.Screen';
 
 // Register Screens
-Navigation.registerComponent("StrokeApp.HomeScreen", () => HomeScreen);
-Navigation.registerComponent("StrokeApp.MedicationsScreen", () => MedicationsScreen);
-Navigation.registerComponent("StrokeApp.WeeklyPlanScreen", () => WeeklyPlanScreen);
-Navigation.registerComponent("StrokeApp.MovingSafelyScreen", () => MovingSafelyScreen);
-Navigation.registerComponent("StrokeApp.EmergencyToolkitScreen", () => EmergencyToolkit);
-Navigation.registerComponent("StrokeApp.MedicationsToolkitScreen", () => MedicationsToolkit);
-Navigation.registerComponent("StrokeApp.HelpNeededToolkitScreen", () => HelpNeededToolkit);
-Navigation.registerComponent("StrokeApp.PhysicalToolkitScreen", () => PhysicalToolkit);
-Navigation.registerComponent("StrokeApp.ScheduleToolkitScreen", () => ScheduleToolkit);
-Navigation.registerComponent("StrokeApp.LoginScreen", () => LoginScreen);
-Navigation.registerComponent("StrokeApp.SkinCareScreen", () => SkinCareScreen);
-Navigation.registerComponent("StrokeApp.BladderControlScreen", () => BladderControlScreen);
-Navigation.registerComponent("StrokeApp.BloodPressureScreen", () => BloodPressureScreen);
-Navigation.registerComponent("StrokeApp.ToolkitHomeScreen", () => ToolkitHomeScreen);
-Navigation.registerComponent("StrokeApp.RangeMotionScreen", () => RangeMotionScreen);
-Navigation.registerComponent("StrokeApp.GettingUpScreen", () => GettingUpScreen);
-Navigation.registerComponent("StrokeApp.BrainBodyScreen", () => BrainBodyScreen);
-Navigation.registerComponent("StrokeApp.EmergencyScreen", () => EmergencyScreen);
-Navigation.registerComponent("StrokeApp.BioScreen", () => BioScreen);
-Navigation.registerComponent("StrokeApp.ContentsScreen", () => ContentsScreen);
-Navigation.registerComponent("StrokeApp.ProfileScreen", () => ProfileScreen);
-Navigation.registerComponent('StrokeApp.NewDayScreen', () => NewDayScreen);
+Navigation.registerComponent("strokeAppSp.HomeScreen", () => HomeScreen);
+Navigation.registerComponent("strokeAppSp.MedicationsScreen", () => MedicationsScreen);
+Navigation.registerComponent("strokeAppSp.WeeklyPlanScreen", () => WeeklyPlanScreen);
+Navigation.registerComponent("strokeAppSp.MovingSafelyScreen", () => MovingSafelyScreen);
+Navigation.registerComponent("strokeAppSp.EmergencyToolkitScreen", () => EmergencyToolkit);
+Navigation.registerComponent("strokeAppSp.MedicationsToolkitScreen", () => MedicationsToolkit);
+Navigation.registerComponent("strokeAppSp.HelpNeededToolkitScreen", () => HelpNeededToolkit);
+Navigation.registerComponent("strokeAppSp.PhysicalToolkitScreen", () => PhysicalToolkit);
+Navigation.registerComponent("strokeAppSp.ScheduleToolkitScreen", () => ScheduleToolkit);
+Navigation.registerComponent("strokeAppSp.LoginScreen", () => LoginScreen);
+Navigation.registerComponent("strokeAppSp.SkinCareScreen", () => SkinCareScreen);
+Navigation.registerComponent("strokeAppSp.BladderControlScreen", () => BladderControlScreen);
+Navigation.registerComponent("strokeAppSp.BloodPressureScreen", () => BloodPressureScreen);
+Navigation.registerComponent("strokeAppSp.ToolkitHomeScreen", () => ToolkitHomeScreen);
+Navigation.registerComponent("strokeAppSp.RangeMotionScreen", () => RangeMotionScreen);
+Navigation.registerComponent("strokeAppSp.GettingUpScreen", () => GettingUpScreen);
+Navigation.registerComponent("strokeAppSp.BrainBodyScreen", () => BrainBodyScreen);
+Navigation.registerComponent("strokeAppSp.EmergencyScreen", () => EmergencyScreen);
+Navigation.registerComponent("strokeAppSp.BioScreen", () => BioScreen);
+Navigation.registerComponent("strokeAppSp.ContentsScreen", () => ContentsScreen);
+Navigation.registerComponent("strokeAppSp.ProfileScreen", () => ProfileScreen);
+Navigation.registerComponent('strokeAppSp.NewDayScreen', () => NewDayScreen);
 
 // Start a App
 //   Promise.all([
@@ -71,7 +71,7 @@ Navigation.registerComponent('StrokeApp.NewDayScreen', () => NewDayScreen);
       
       Navigation.startSingleScreenApp({
         screen: {
-          screen: "StrokeApp.LoginScreen",
+          screen: "strokeAppSp.LoginScreen",
           title: "Login",
 
         },

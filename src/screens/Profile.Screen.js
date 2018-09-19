@@ -49,7 +49,7 @@ class ProfileScreen extends Component {
 
   async logOutHandler () {
     rootNavigator.resetTo({
-      screen: 'StrokeApp.LoginScreen',
+      screen: 'strokeAppSp.LoginScreen',
       backButtonHidden: true,
       navigatorStyle: {
         tabBarHidden: true,

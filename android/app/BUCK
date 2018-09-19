@@ -45,12 +45,12 @@ android_library(
 
 android_build_config(
     name = "build_config",
-    package = "com.strokeapp",
+    package = "com.strokeappsp",
 )
 
 android_resource(
     name = "res",
-    package = "com.strokeapp",
+    package = "com.strokeappsp",
     res = "src/main/res",
 )
 

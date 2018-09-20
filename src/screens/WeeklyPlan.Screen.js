@@ -15,9 +15,8 @@ import ImageContainer from "../components/UI/ImageContainer";
 
 const safetyImage = require('../assets/safety.jpg');
 const familyPlanImage = require('../assets/family-plan.png');
-const weeklyScheduleIcon = require('../assets/fotoWeeklySchedule.jpg');
-const helpNeededIcon = require('../assets/fotohelpneeded.jpg');
-
+const weeklyScheduleIcon = require('../assets/FormularioHorarioSemanal.jpg');
+const helpNeededIcon = require('../assets/FormularioAyudaNecesaria.jpg');
 
 class WeeklyPlanScreen extends Component {
   constructor(props) {

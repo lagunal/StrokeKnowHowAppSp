@@ -14,26 +14,26 @@ const startTabs = () => {
             tabs: [
                 {
                     screen: "strokeAppSp.HomeScreen",
-                    label: "Home",
-                    title: "Home",
+                    label: "Principal",
+                    title: "Página principal",
                     icon: sources[0],
                     
                 },
                 {
                     screen: "strokeAppSp.ContentsScreen",
-                    label: "Contents",
-                    title: "Contents",
+                    label: "Contenido",
+                    title: "Contenido",
                     icon: sources[2],
                 },
                 {
                     screen: "strokeAppSp.ToolkitHomeScreen",
-                    label: "Toolkits",
-                    title: "Interactive Toolkits",
+                    label: "Formularios",
+                    title: "Formularios Interactivos",
                     icon: sources[1],
                 },
                 {
                     screen: "strokeAppSp.ProfileScreen",
-                    label: "Account",
+                    label: "Cuenta",
                     icon: sources[3],
                     
                 },

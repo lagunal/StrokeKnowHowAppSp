@@ -12,8 +12,8 @@ import MainText from "../components/UI/MainText";
 import ImageContainer from "../components/UI/ImageContainer";
 import LinkToolkitWrapper from "../components/UI/LinkToolkitWrapper";
 
-const medicationIcon = require('../assets/FotoMedication.jpg');
 const medicationsImage = require('../assets/medications.png');
+const medicationIcon = require('../assets/FormularioMedicacion.jpg');
 
 class MedicationsScreen extends Component {
     constructor(props) {

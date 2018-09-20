@@ -10,7 +10,7 @@ import MainText from "../components/UI/MainText";
 import HeadingText from '../components/UI/HeadingText';
 import LinkToolkitWrapper from "../components/UI/LinkToolkitWrapper";
 
-const physicalIcon = require('../assets/FotoPhysicalTherapy.jpg');
+const physicalIcon = require('../assets/FormularioTerapiaFisica.jpg');
 
 class BloodPressureScreen extends Component {
     constructor(props) {

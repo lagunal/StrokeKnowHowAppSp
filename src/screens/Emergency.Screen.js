@@ -17,7 +17,7 @@ import Link from "../components/UI/Link";
 import ImageContainer from "../components/UI/ImageContainer";
 
 const { width, height } = Dimensions.get("window");
-const emergencyIcon = require('../assets/emergency-station-icon.png');
+const emergencyIcon = require('../assets/StrokeKnowHow_Toolkit_Emergency-Spanish.jpg');
 const strokeLine = require('../assets/helpline-logo.png');
 
 class EmergencyScreen extends Component {

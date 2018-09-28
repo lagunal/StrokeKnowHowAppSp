@@ -13,7 +13,7 @@ const HeaderToolkit = (props) => [
         </View>,
         <View style={styles.instructionsWrap}>
             <Text style={styles.textInstructions}> {props.instructions}</Text>
-            <Text style={styles.textInstructions}>Rotate cel phone sideways to have a better view.</Text>
+            <Text style={styles.textInstructions}>Rote el celular de lado para tener una mejor visibilidad.</Text>
         </View>
 ];
 

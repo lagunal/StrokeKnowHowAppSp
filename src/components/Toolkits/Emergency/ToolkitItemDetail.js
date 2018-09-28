@@ -4,16 +4,25 @@ import { View, TextInput } from 'react-native';
 import HeadingText from '../../UI/HeadingText';
 import SubHeadingText from '../../UI/SubHeadingText';
 import MainText from "../../UI/MainText";
-import TextFieldInput from "../../UI/TextInputField";
 import Button from "../../UI/Button";
+import DetailToolkit from '../../UI/DetailToolkit';
 import styles from '../../../styles/styles';
 import ajax from '../../../ajax/ajax';
 
 class ToolkitItemDetail extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: this.props.item.name,
+            phone: this.props.item.phone,
+            medication: this.props.item.medication,
+            dosage: this.props.item.dosage,
+            purpose: this.props.item.purpose,
+        }
+        this.handlePress = this.handlePress.bind(this);
+    }
 
-    onNavigatorEvent(event) { // this is the onPress handler for the two buttons together
-        if (event.type == 'NavBarButtonPress') { // this is the event type for button presses
-          if (event.id == 'save') { // this is the same id field from the static navigatorButtons definition
+    handlePress() {
             var data = this.props.data;
             if (this.props.keyId[2]) { //if parent is ToolkitMedication
                 for (var key in data){
@@ -42,61 +51,18 @@ class ToolkitItemDetail extends Component {
             ajax.saveToolkit(jsonData, this.props.userId, this.props.token, 'emergency');
             this.props.onPress();//calls the onPress event from parent 
             
-          }
-        }
     }
-
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            name: this.props.item.name,
-            phone: this.props.item.phone,
-            medication: this.props.item.medication,
-            dosage: this.props.item.dosage,
-            purpose: this.props.item.purpose,
-        }
-        this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent.bind(this));
-    }
-
-
-    //updates the data array with the updated info and call function to save 
-    //handlePress = () => {
-        // var data = this.props.data;
-        // if (this.props.keyId[2]) { //if parent is ToolkitMedication
-        //     for (var key in data){
-        //         if (data.hasOwnProperty(key)) {
-        //             data[key] = (key === this.props.keyId[0]) ? this.state.medication : data[key];
-        //             data[key] = (key === this.props.keyId[1]) ? this.state.dosage : data[key];
-        //             data[key] = (key === this.props.keyId[2]) ? this.state.purpose : data[key];
-        //         }
-        //     }
-        // } else if (this.props.keyId[1]) { //if parent is ToolkitContactInfo
-        //     for (var key in data){
-        //         if (data.hasOwnProperty(key)) {
-        //             data[key] = (key === this.props.keyId[0]) ? this.state.name : data[key];
-        //             data[key] = (key === this.props.keyId[1]) ? this.state.phone : data[key];
-                    
-        //         }
-        //     }
-        // } else {
-        //     for (var key in data){
-        //         if (data.hasOwnProperty(key)) {
-        //             data[key] = (key === this.props.keyId[0]) ? this.state.name : data[key];                    
-        //         }
-        //     }
-        // }
-        // let jsonData = JSON.stringify(data);
-        // ajax.saveToolkit(jsonData, this.props.userId, this.props.token, 'emergency');
-        // this.props.onPress();//calls the onPress event from parent 
-   // }
+ 
     
     render(){
         const { item } = this.props;
         if (this.props.keyId[2]) { //if parent is ToolkitMedication
             return(
                 <View style={{flex: 1}}>    
-                                    
+                       <DetailToolkit 
+                            instructions={'Escriba el medicamento, la dosis y el propósito.'}
+                        />
+                        
                     <MainText><SubHeadingText>{item.labelMedication}</SubHeadingText>  </MainText>
                     <TextInput value={this.state.medication} 
                             style={styles.inputStyleToolkit}
@@ -112,9 +78,9 @@ class ToolkitItemDetail extends Component {
                             style={styles.inputStyleToolkit}
                             onChangeText={purpose => this.setState({ purpose } )}/>
 
-                    {/* <Button style={{margin: 50}} color={'#ED7030'} textColor={'white'} onPress={this.handlePress}>
-                       Save
-                    </Button> */}
+                    <Button style={{margin: 50}} color={'#ED7030'} textColor={'white'} onPress={this.handlePress}>
+                       Guardar
+                    </Button>
                 </View>
             )
         }
@@ -122,7 +88,9 @@ class ToolkitItemDetail extends Component {
         if (this.props.keyId[1]) { //if parent is ToolkitContactInfo
             return(
                     <View style={{flex: 1}}>    
-                                        
+                        <DetailToolkit 
+                            instructions={'Escriba el nombre de la persona o institución, y el número de teléfono.'}
+                        />
                         <MainText><SubHeadingText>{item.label}</SubHeadingText>  </MainText>
                         <TextInput value={this.state.name} 
                                 style={styles.inputStyleToolkit}
@@ -132,24 +100,26 @@ class ToolkitItemDetail extends Component {
                                 style={styles.inputStyleToolkit}
                                 onChangeText={phone => this.setState({ phone } )}/>
 
-                        {/* <Button style={{margin: 50}} color={'#ED7030'} textColor={'white'} onPress={this.handlePress}>
-                        Save
-                        </Button> */}
+                        <Button style={{margin: 50}} color={'#ED7030'} textColor={'white'} onPress={this.handlePress}>
+                        Guardar
+                        </Button>
                     </View>
             )
         }
         //parent is emergencyToolkitScreen
         return(
             <View style={{flex: 1}}>    
-                                
+                <DetailToolkit 
+                        instructions={'Escriba los medicamentos que producen alergia, o condiciones médicas a tener en cuenta.'}
+                    />                
                 <MainText><SubHeadingText>{item.label}</SubHeadingText>  </MainText>
                 <TextInput value={this.state.name} 
                         style={styles.inputStyleToolkit}
                         onChangeText={name => this.setState({ name } )} />
 
-                {/* <Button style={{margin: 50}} color={'#ED7030'} textColor={'white'} onPress={this.handlePress}>
-                Save
-                </Button> */}
+                <Button style={{margin: 50}} color={'#ED7030'} textColor={'white'} onPress={this.handlePress}>
+                Guardar
+                </Button>
             </View>
         )
     }

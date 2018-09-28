@@ -7,39 +7,12 @@ import SubHeadingText from '../../UI/SubHeadingText';
 import MainText from "../../UI/MainText";
 import TextFieldInput from "../../UI/TextInputField";
 import Button from "../../UI/Button";
+import DetailToolkit from '../../UI/DetailToolkit';
 import BodyScroll from "../../UI/BodyScroll";
 import styles from '../../../styles/styles';
 import ajax from '../../../ajax/ajax';
 
 class MedicationDetail extends Component {
-   
-  
-    onNavigatorEvent(event) { // this is the onPress handler for the two buttons together
-        if (event.type == 'NavBarButtonPress') { // this is the event type for button presses
-          if (event.id == 'save') { // this is the same id field from the static navigatorButtons definition
-                
-                var data = this.props.data;
-                for (var key in data){
-                    if (data.hasOwnProperty(key)) {
-                        data[key] = (key === this.props.keyId[0]) ? this.state.medicine : data[key];
-                        data[key] = (key === this.props.keyId[1]) ? this.state.time : data[key];
-                        data[key] = (key === this.props.keyId[2]) ? this.state.monday : data[key];
-                        data[key] = (key === this.props.keyId[3]) ? this.state.tuesday : data[key];
-                        data[key] = (key === this.props.keyId[4]) ? this.state.wednesday : data[key];
-                        data[key] = (key === this.props.keyId[5]) ? this.state.thursday : data[key];
-                        data[key] = (key === this.props.keyId[6]) ? this.state.friday : data[key];
-                        data[key] = (key === this.props.keyId[7]) ? this.state.saturday : data[key];
-                        data[key] = (key === this.props.keyId[8]) ? this.state.sunday : data[key];
-                    }
-                }
-    
-            let jsonData = JSON.stringify(data);      
-            ajax.saveToolkit(jsonData, this.props.userId, this.props.token, 'medication');
-            this.props.onPress();//calls the onPress event from parent 
-          }
-        }
-    }
-
     constructor(props) {
         super(props);
         this.state = {
@@ -61,8 +34,41 @@ class MedicationDetail extends Component {
         this.handleSwitchFriday = this.handleSwitchFriday.bind(this);
         this.handleSwitchSaturday = this.handleSwitchSaturday.bind(this);
         this.handleSwitchSunday = this.handleSwitchSunday.bind(this);
-        this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent.bind(this));
+        this.handlePress = this.handlePress.bind(this);
+        //this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent.bind(this));
     }
+  
+    // onNavigatorEvent(event) { // this is the onPress handler for the two buttons together
+    //     if (event.type == 'NavBarButtonPress') { // this is the event type for button presses
+    //       if (event.id == 'save') { // this is the same id field from the static navigatorButtons definition
+    
+    //updates the data array with the updated info and call function to save 
+    handlePress() {
+   
+                var data = this.props.data;
+                for (var key in data){
+                    if (data.hasOwnProperty(key)) {
+                        data[key] = (key === this.props.keyId[0]) ? this.state.medicine : data[key];
+                        data[key] = (key === this.props.keyId[1]) ? this.state.time : data[key];
+                        data[key] = (key === this.props.keyId[2]) ? this.state.monday : data[key];
+                        data[key] = (key === this.props.keyId[3]) ? this.state.tuesday : data[key];
+                        data[key] = (key === this.props.keyId[4]) ? this.state.wednesday : data[key];
+                        data[key] = (key === this.props.keyId[5]) ? this.state.thursday : data[key];
+                        data[key] = (key === this.props.keyId[6]) ? this.state.friday : data[key];
+                        data[key] = (key === this.props.keyId[7]) ? this.state.saturday : data[key];
+                        data[key] = (key === this.props.keyId[8]) ? this.state.sunday : data[key];
+                    }
+                }
+    
+            let jsonData = JSON.stringify(data);      
+            ajax.saveToolkit(jsonData, this.props.userId, this.props.token, 'medication');
+            this.props.onPress();//calls the onPress event from parent 
+    }     
+    //       }
+    //     }
+    // }
+
+ 
 
     _showDateTimePicker = () => this.setState({ isDateTimePickerVisible: true });
 
@@ -110,26 +116,25 @@ class MedicationDetail extends Component {
             sunday: !prevState.sunday 
         }));
     }
-    //updates the data array with the updated info and call function to save 
-    // handlePress = () => {
-   
-    // }
+  
     
     render(){
-        //const { item } = this.props;
 
         return(
             <BodyScroll>
             <View style={{flex: 1}}>    
-                                
-                <MainText><SubHeadingText>Medicine/Dose</SubHeadingText>  </MainText>
+                <DetailToolkit 
+                    instructions={'Escriba el medicamento, seleccione la hora y seleccione el dia de la semana.'}
+                />
+            
+                <MainText><SubHeadingText>Medicamento / Dosis</SubHeadingText>  </MainText>
                 <TextInput value={this.state.medicine} 
                         style={styles.inputStyleToolkit}
                         onChangeText={medicine => this.setState({ medicine } )} />
                 
                 <TouchableOpacity onPress={this._showDateTimePicker}>
                         <View style={styleComponent.timeContainer}> 
-                            <MainText><SubHeadingText>Time</SubHeadingText>  </MainText>
+                            <MainText><SubHeadingText>Hora</SubHeadingText>  </MainText>
                             <MainText>{this.state.time} </MainText>
                         </View>
                 </TouchableOpacity>
@@ -138,13 +143,13 @@ class MedicationDetail extends Component {
                     onConfirm={this._handleDatePicked}
                     onCancel={this._hideDateTimePicker}
                     mode='time'
-                    titleIOS={'Pick a time'}
+                    titleIOS={'Seleccione una hora'}
                     //minuteInterval={30}
                     //date={new Date()}
                 />
                
                 <View style={styleComponent.dayContainer}> 
-                    <MainText><SubHeadingText>Monday</SubHeadingText>  </MainText>
+                    <MainText><SubHeadingText>Lunes</SubHeadingText>  </MainText>
                     <Switch 
                         onValueChange={this.handleSwitchMonday}
                         value={this.state.monday}
@@ -152,7 +157,7 @@ class MedicationDetail extends Component {
                 </View>
 
                 <View style={styleComponent.dayContainer}> 
-                    <MainText><SubHeadingText>Tuesday</SubHeadingText>  </MainText>
+                    <MainText><SubHeadingText>Martes</SubHeadingText>  </MainText>
                    <Switch 
                         onValueChange={this.handleSwitchTuesday}
                         value={this.state.tuesday}
@@ -160,7 +165,7 @@ class MedicationDetail extends Component {
                 </View>
 
                 <View style={styleComponent.dayContainer}> 
-                    <MainText><SubHeadingText>Wednesday</SubHeadingText>  </MainText>
+                    <MainText><SubHeadingText>Miércoles</SubHeadingText>  </MainText>
                     <Switch 
                         onValueChange={this.handleSwitchWednesday}
                         value={this.state.wednesday}
@@ -168,7 +173,7 @@ class MedicationDetail extends Component {
                 </View>
 
                 <View style={styleComponent.dayContainer}> 
-                    <MainText><SubHeadingText>Thursday</SubHeadingText>  </MainText>
+                    <MainText><SubHeadingText>Jueves</SubHeadingText>  </MainText>
                     <Switch 
                         onValueChange={this.handleSwitchThursday}
                         value={this.state.thursday}                  
@@ -176,7 +181,7 @@ class MedicationDetail extends Component {
                 </View>
 
                 <View style={styleComponent.dayContainer}> 
-                    <MainText><SubHeadingText>Friday</SubHeadingText>  </MainText>
+                    <MainText><SubHeadingText>Viernes</SubHeadingText>  </MainText>
                     <Switch 
                         onValueChange={this.handleSwitchFriday}
                         value={this.state.friday}
@@ -184,7 +189,7 @@ class MedicationDetail extends Component {
                 </View>
 
                 <View style={styleComponent.dayContainer}> 
-                    <MainText><SubHeadingText>Saturday</SubHeadingText>  </MainText>
+                    <MainText><SubHeadingText>Sábado</SubHeadingText>  </MainText>
                     <Switch 
                         onValueChange={this.handleSwitchSaturday}
                         value={this.state.saturday}
@@ -192,16 +197,16 @@ class MedicationDetail extends Component {
                 </View>
 
                 <View style={styleComponent.dayContainer}> 
-                    <MainText><SubHeadingText>Sunday</SubHeadingText>  </MainText>
+                    <MainText><SubHeadingText>Domingo</SubHeadingText>  </MainText>
                     <Switch 
                         onValueChange={this.handleSwitchSunday}
                         value={this.state.sunday}
                     />
                 </View>
 
-                {/* <Button style={{margin: 50}} color={'#ED7030'} textColor={'white'} onPress={this.handlePress}>
-                Save
-                </Button> */}
+                <Button style={{margin: 50}} color={'#ED7030'} textColor={'white'} onPress={this.handlePress}>
+                Guardar
+                </Button>
 
             </View>
             </BodyScroll>

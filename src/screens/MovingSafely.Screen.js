@@ -51,10 +51,6 @@ class MovingSafelyScreen extends Component {
       const paused = this.state.videoAnimationPaused;
 
       const { start, end } = this.state.position;
-
-      // console.log('scroll ' + scrollPosition);
-      // console.log('start ' + this.state.position.start);
-      // console.log('end ' + this.state.position.end);
   
       //Video animation
       if (scrollPosition > start && scrollPosition < end && paused) {
@@ -65,69 +61,9 @@ class MovingSafelyScreen extends Component {
         this.setState({ videoAnimationPaused: true });
       }
   
-      //console.log(this.state.videoAnimationPaused);
     };  
 
     render() {
-      // if (this.props.homeScreen === true) {
-      //   return (
-      //     <View style={styles.container}>
-      //               <TouchableOpacity onPress={this.playVideo}>
-      //                   <View style={{padding: 20}}>
-      //                       <MainText><SubHeadingText style={{marginBottom: 0, fontSize: 22}}>Check VIDEO &rarr;</SubHeadingText></MainText>
-      //                       <Video
-      //                         source={{uri: "https://strokeknowhow.org/wp-content/uploads/2018/08/16_Transfer_from_bed_to_wheelchair.mp4"}}
-      //                         ref={(ref) => {
-      //                           this.player = ref
-      //                         }}       
-      //                         style={{height: 300, width: wp('80%')}}                             
-      //                         rate={1}
-      //                         paused={this.state.videoPaused}
-      //                         volume={1}
-      //                         muted={false}
-      //                         playInBackground={false}
-      //                         playWhenInactive={false}
-      //                         resizeMode='contain'
-      //                         repeat={false}
-      //                         />
-      //                   </View>
-      //               </TouchableOpacity> 
-
-      //               <HeadingText>Helpers Protecting Themselves</HeadingText>
-                    
-      //               <MainText style={styles.bullets}>  
-      //               {`\u2022`} When moving someone, keep your hips and knees slightly bent. Stand close to person – too far away puts a strain on your back. 
-      //               </MainText>
-      //               <MainText style={styles.bullets}>
-      //               {`\u2022`} Stand with feet slightly apart, one foot ahead of the other to keep your balance, shift your weight if necessary.
-      //               </MainText>
-      //               <HeadingText>Share the Care</HeadingText>
-
-      //               <ImageContainer source={familyImage} />
-
-      //               <MainText style={{marginBottom: 0}}>  
-      //                   When my wife, Tina, had a stroke,
-      //                     it hit our whole family, and we each had 
-      //                     a job to do– even the kids.
-      //               </MainText>
-      //               <PictureLegend >&mdash; Javier, Lima, Peru</PictureLegend>
-
-                    
-      //                 <HeadingText>Questions Families {`\n`} Ask Themselves</HeadingText>
-                    
-      //               <MainText style={styles.bullets}>
-      //                   {`\u2022`} Who will handle personal care; physical therapy? When?
-      //               </MainText>
-      //               <MainText style={styles.bullets}>
-      //               {`\u2022`} Shop, share housekeeping? When? 
-      //               </MainText>
-      //               <MainText style={styles.bullets}>     
-      //                   {`\u2022`} Drive to doctor and therapy appointments. 
-      //               </MainText>        
-      //     </View>           
-      //   );
-      // }
-
         return (
           <View style={styles.container}>
             <ScrollView
@@ -136,7 +72,7 @@ class MovingSafelyScreen extends Component {
             >
                     <TouchableOpacity onPress={this.playVideo}>
                         <View style={{padding: 20}}>
-                            <MainText><SubHeadingText style={{marginBottom: 0, fontSize: wp('3.5%')}}>Touch video to open full screen player &rarr;</SubHeadingText></MainText>
+                            <MainText><SubHeadingText style={{marginBottom: 0, fontSize: wp('3.5%')}}>Toca el video para abrir el reproductor pantalla completa &rarr;</SubHeadingText></MainText>
                             <Video
                               source={{uri: "https://strokeknowhow.org/wp-content/uploads/2018/08/16_Transfer_from_bed_to_wheelchair.mp4"}}
                               ref={(ref) => {
@@ -158,37 +94,35 @@ class MovingSafelyScreen extends Component {
                         </View>
                     </TouchableOpacity>  
 
-                    <HeadingText>Helpers Protecting Themselves</HeadingText>
+                    <HeadingText>Los Ayudantes se Protegen a sí Mismos</HeadingText>
                     
                     <MainText style={styles.bullets}>  
-                    {`\u2022`} When moving someone, keep your hips and knees slightly bent. Stand close to person – too far away puts a strain on your back. 
+                    {`\u2022`} Cuando mueva a alguien, mantenga sus caderas y rodillas ligeramente flexionadas. Párese cerca de la persona: demasiado lejos pone tensión en su espalda. 
                     </MainText>
                     <MainText style={styles.bullets}>
-                    {`\u2022`} Stand with feet slightly apart, one foot ahead of the other to keep your balance, shift your weight if necessary.
+                    {`\u2022`} Párese con los pies ligeramente separados, un pie delante del otro para mantener el equilibrio, cambie su peso cuando sea necesario.
                     </MainText>
-                    <HeadingText>Share the Care</HeadingText>
+                    <HeadingText>Comparte el Cuidado</HeadingText>
 
                     <Image source={familyImage} style={styles.imageDefault}/>
 
                     <MainText style={{marginBottom: 0}}>  
-                        When my wife, Tina, had a stroke,
-                          it hit our whole family, and we each had 
-                          a job to do– even the kids.
+                      Cuando mi esposa, Tina, tuvo un derrame cerebral, afectó a toda nuestra familia. Todos teníamos un trabajo que hacer, incluso los niños.
                     </MainText>
                     <PictureLegend >&mdash; Javier, Lima, Peru</PictureLegend>
 
                     
-                      <HeadingText>Questions Families {`\n`} Ask Themselves</HeadingText>
+                      <HeadingText>Preguntas {`\n`} que las Familias se Hacen</HeadingText>
                     
                     <MainText style={styles.bullets}>
-                        {`\u2022`} Who will handle personal care; physical therapy? When?
+                        {`\u2022`} ¿Quién se encargará del cuidado personal y de las terapias? ¿Cuándo?
                     </MainText>
                     <MainText style={styles.bullets}>
-                        {`\u2022`} Shop, share housekeeping? When? 
+                    {`\u2022`} ¿Quién realizará las compras y compartirá el servicio de limpieza? ¿Cuándo?
                     </MainText>
                     <MainText style={styles.bullets}>     
-                        {`\u2022`} Drive to doctor and therapy appointments. 
-                    </MainText>
+                        {`\u2022`} ¿Quién conducirá a las citas con el doctor y a las terapias?
+                    </MainText>     
           
             </ScrollView>                
 

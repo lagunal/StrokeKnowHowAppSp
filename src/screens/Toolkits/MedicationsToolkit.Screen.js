@@ -26,22 +26,6 @@ import ajax from '../../ajax/ajax';
 const logoImage = require('../../assets/logo-header.jpg');
 
 class MedicationsToolkit extends Component {
-    static navigatorButtons = {
-      rightButtons: [
-          {
-          title: 'Save', // for a textual button, provide the button title (label)
-          id: 'save', // id for this button, given in onNavigatorEvent(event) to help understand which button was clicked
-          //testID: 'e2e_rules', // optional, used to locate this view in end-to-end tests
-          //disabled: (this.state.currentItem) ? false : true, // optional, used to disable the button (appears faded and doesn't interact)
-          //disableIconTint: true, // optional, by default the image colors are overridden and tinted to navBarButtonColor, set to true to keep the original image colors
-          //showAsAction: 'ifRoom', // optional, Android only. Control how the button is displayed in the Toolbar. Accepted valued: 'ifRoom' (default) - Show this item as a button in an Action Bar if the system decides there is room for it. 'always' - Always show this item as a button in an Action Bar. 'withText' - When this item is in the action bar, always show it with a text label even if it also has an icon specified. 'never' - Never show this item as a button in an Action Bar.
-          buttonColor: 'white', // Optional, iOS only. Set color for the button (can also be used in setButtons function to set different button style programatically)
-          buttonFontSize: 18, // Set font size for the button (can also be used in setButtons function to set different button style programatically)
-          buttonFontWeight: '600', // Set font weight for the button (can also be used in setButtons function to set different button style programatically)
-          //systemItem: 'save',  
-        },
-      ]
-    };
 
     constructor(props){
       super(props);
@@ -161,7 +145,7 @@ class MedicationsToolkit extends Component {
                                   onPress={this.saveData}
                                   userId={this.state.user.id} 
                                   token={this.state.user.token}
-                                  navigator={this.props.navigator}
+                                  
                                  />
             </View>
           )
@@ -173,39 +157,39 @@ class MedicationsToolkit extends Component {
             <View style={{flex: 1}}>
 
                 <HeaderToolkit 
-                    title='INTERACTIVE MEDICATION'
-                    instructions="List and Check of Medications."
+                    title='FORMULARIO INTERACTIVO MEDICACIÓN'
+                    instructions="Presione una fila para ingresar o modificar información."
                     //style={{fontSize: wp('4%')}}
                 />
 
                 <View style={styles.containerGrid}> 
 
                   <View style={[styles.cell, {flex: 2}]}>
-                    <Text style={styles.titleCol}>Medication Dose</Text>
+                    <Text style={styles.titleCol}>Medicamento Dosis</Text>
                   </View>
                   <View style={styles.cell }>
-                    <Text style={styles.titleCol}>Time</Text>
+                    <Text style={styles.titleCol}>Hora</Text>
                   </View>
                   <View style={styles.cell}> 
-                    <Text style={styles.titleCol}>Mo.</Text>
+                    <Text style={styles.titleCol}>Lun</Text>
                   </View>
                   <View style={styles.cell}>
-                    <Text style={styles.titleCol}>Tu.</Text>
+                    <Text style={styles.titleCol}>Mar</Text>
                   </View>
                   <View style={styles.cell}>
-                    <Text style={styles.titleCol}>Wed.</Text>
+                    <Text style={styles.titleCol}>Mie</Text>
                   </View>
                   <View style={styles.cell}>
-                    <Text style={styles.titleCol}>Thu.</Text>
+                    <Text style={styles.titleCol}>Jue</Text>
                   </View>
                   <View style={styles.cell}>
-                    <Text style={styles.titleCol}>Fri.</Text>
+                    <Text style={styles.titleCol}>Vie</Text>
                   </View>
                   <View style={styles.cell}>
-                    <Text style={styles.titleCol}>Sa.</Text>
+                    <Text style={styles.titleCol}>Sab</Text>
                   </View> 
                   <View style={styles.cell}>
-                    <Text style={styles.titleCol}>Sun.</Text>
+                    <Text style={styles.titleCol}>Dom</Text>
                   </View>
 
                 </View>

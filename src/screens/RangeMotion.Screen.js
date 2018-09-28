@@ -17,94 +17,41 @@ class RangeMotionScreen extends Component {
 
     
     render() {
-      // if (this.props.homeScreen === 'home') { 
-      //   return (
-      //     <View style={styles.container}>
-      //       <HeadingText>Range-of-Motion</HeadingText>
- 
-      //       <MainText>
-      //           Range-of-motion exercises can keep joints
-      //           moving freely and fully. Exercises are to do either by yourself or with someone. 
-      //       </MainText>
-      //       <MainText style={styles.bullets}>
-      //       {`\u2022`} Do exercises in a slow, smooth motion.  
-      //                 A helper firmly holds joint exercised with one hand, other to create, guide movement. 
-      //                 Helpers stop exercise when a joint is not moving freely, or there is discomfort. 
-      //       </MainText>  
-      //       <MainText style={styles.bullets}>
-      //       {`\u2022`} Move and stretch muscles in a weakened arm and leg several times a day, 
-      //       to prevent contractures, shortening of muscles around joints that cause tight, painful bands.
-      //       </MainText>          
-
-      //       <HeadingText>Body Positioning</HeadingText>
-      //       <MainText>
-      //           At all times — whether lying in bed, sitting, or walking — good body positioning is essential for the body's soundness. 
-      //           To prevent contractures. 
-      //       </MainText>
-      //       <MainText style={styles.bullets}>
-      //       {`\u2022`} Position of your head affects muscle tone of trunk, arms, legs. 
-      //                   If turned to one side, interferes with balance. ability to move about. 
-      //       </MainText>  
-      //       <MainText style={styles.bullets}>
-      //       {`\u2022`} Weight needs to be evenly distributed. Use a pillow to prop up lowered side.  
-      //       </MainText>   
-      //       <MainText style={styles.bullets}>
-      //       {`\u2022`} To hold your shoulder joint in place, support forearm with a pillow. 
-      //                 Have your shoulder and arm stretched forward.
-      //       </MainText>
-      //       <MainText style={styles.bullets}>
-      //       {`\u2022`} Lift weaker wrist with sound hand to bring arm forward. 
-      //                 Keep wrist extended, fingers straight as possible. 
-      //       </MainText>   
-            
-      //       <Link />
-
-      //     </View>           
-      //   );
-      // }  
 
         return (
           <View style={styles.container}>
             <ScrollView>
 
-            <HeadingText>Range-of-Motion</HeadingText>
- 
-            <MainText>
-                Range-of-motion exercises can keep joints
-                moving freely and fully. Exercises are to do either by yourself or with someone. 
-            </MainText>
-            <MainText style={styles.bullets}>
-            {`\u2022`} Do exercises in a slow, smooth motion.  
-                      A helper firmly holds joint exercised with one hand, other to create, guide movement. 
-                      Helpers stop exercise when a joint is not moving freely, or there is discomfort. 
-            </MainText>  
-            <MainText style={styles.bullets}>
-            {`\u2022`} Move and stretch muscles in a weakened arm and leg several times a day, 
-            to prevent contractures, shortening of muscles around joints that cause tight, painful bands.
-            </MainText>          
+                <HeadingText>Rango de Movimiento</HeadingText>
+                
+                <MainText>
+                    Los ejercicios de rango de movimiento pueden mantener las articulaciones que se mueven libre y plenamente. Los ejercicios los puede hacer por usted mismo o con la ayuda de alguien.  
+                </MainText>
+                <MainText style={styles.bullets}>
+                {`\u2022`} Haga los ejercicios con movimiento lento y suave. Un ayudante sostiene firmemente la articulación ejercitada con una mano, y con la otra crea o guía el movimiento. Los ayudantes paran el ejercicio cuando una articulación no se mueve libremente o hay molestias. 
+                </MainText>  
+                <MainText style={styles.bullets}>
+                {`\u2022`} Mueva y estire varias veces al día, los músculos del brazo y pierna debilitados, para evitar contracturas y acortamiento de los músculos alrededor de las articulaciones, lo cual puede causar bandas apretadas y dolorosas.
+                </MainText>          
 
-            <HeadingText>Body Positioning</HeadingText>
-            <MainText>
-                At all times — whether lying in bed, sitting, or walking — good body positioning is essential for the body's soundness. 
-                To prevent contractures. 
-            </MainText>
-            <MainText style={styles.bullets}>
-            {`\u2022`} Position of your head affects muscle tone of trunk, arms, legs. 
-                        If turned to one side, interferes with balance. ability to move about. 
-            </MainText>  
-            <MainText style={styles.bullets}>
-            {`\u2022`} Weight needs to be evenly distributed. Use a pillow to prop up lowered side.  
-            </MainText>   
-            <MainText style={styles.bullets}>
-            {`\u2022`} To hold your shoulder joint in place, support forearm with a pillow. 
-                      Have your shoulder and arm stretched forward.
-            </MainText>
-            <MainText style={styles.bullets}>
-            {`\u2022`} Lift weaker wrist with sound hand to bring arm forward. 
-                      Keep wrist extended, fingers straight as possible. 
-            </MainText>   
-            
-            <Link />
+                <HeadingText>Posicionamiento del Cuerpo</HeadingText>
+                <MainText>
+                    En todo momento, ya sea acostado, sentado o caminando, un buen posicionamiento del cuerpo es esencial para la solidez del cuerpo y evitar contracturas. 
+                </MainText>
+                <MainText style={styles.bullets}>
+                {`\u2022`} La posición de la cabeza afecta el tono muscular del tronco, los brazos y las piernas. Si se gira hacia un lado, interfiere con el equilibrio y la capacidad de moverse. 
+                </MainText>  
+                <MainText style={styles.bullets}>
+                {`\u2022`} El peso debe ser distribuido uniformemente. Use una almohada para apuntalar el lado caído. 
+                </MainText>   
+                <MainText style={styles.bullets}>
+                {`\u2022`} Para sostener la articulación del hombro en su lugar, sostenga el antebrazo con una almohada. Haga que su hombro y brazo se estiren hacia adelante.
+                </MainText>
+                <MainText style={styles.bullets}>
+                {`\u2022`} Levante la muñeca más débil con la mano sana para llevar el brazo adelante. Mantenga la muñeca extendida, los dedos rectos como sea posible. 
+                </MainText>   
+                
+                <Link />
 
             </ScrollView>                
           </View>           

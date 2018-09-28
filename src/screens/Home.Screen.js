@@ -44,15 +44,15 @@ class HomeScreen extends Component {
 
   state = {
     videoAnimationPaused: true,
-    videoRobPaused: true,
+    // videoRobPaused: true,
     position: {
         start: null,
         end: null,
     },
-    positionVideoRob: {
-        startRob: null,
-        endRob: null,
-    }
+    // positionVideoRob: {
+    //     startRob: null,
+    //     endRob: null,
+    // }
   };
 
   handleVideoLayout = (e) => {
@@ -62,25 +62,25 @@ class HomeScreen extends Component {
     this.state.position.end = this.state.position.start + e.nativeEvent.layout.height + THRESHOLD;
   };
 
-  handleVideoLayoutRob = (e) => {
-    const { height } = Dimensions.get("window");
+  // handleVideoLayoutRob = (e) => {
+  //   const { height } = Dimensions.get("window");
     
-    if (height > 600) {
-        this.state.positionVideoRob.startRob = 11300 + height - THRESHOLD;
-        this.state.positionVideoRob.endRob = this.state.positionVideoRob.startRob + 300 + THRESHOLD;
-    } else {
-        this.state.positionVideoRob.startRob = 9800 + height - THRESHOLD;
-        this.state.positionVideoRob.endRob = this.state.positionVideoRob.startRob + 300 + THRESHOLD;
-    }
-  };
+  //   if (height > 600) {
+  //       this.state.positionVideoRob.startRob = 11300 + height - THRESHOLD;
+  //       this.state.positionVideoRob.endRob = this.state.positionVideoRob.startRob + 300 + THRESHOLD;
+  //   } else {
+  //       this.state.positionVideoRob.startRob = 9800 + height - THRESHOLD;
+  //       this.state.positionVideoRob.endRob = this.state.positionVideoRob.startRob + 300 + THRESHOLD;
+  //   }
+  // };
 
   handleScroll = (e) => {
     
     const scrollPosition = e.nativeEvent.contentOffset.y;
     const paused = this.state.videoAnimationPaused;
-    const pausedRob = this.state.videoRobPaused;
+    //const pausedRob = this.state.videoRobPaused;
     const { start, end } = this.state.position;
-    const { startRob, endRob } = this.state.positionVideoRob;
+    // const { startRob, endRob } = this.state.positionVideoRob;
     // console.log('scroll ' + scrollPosition);
     // console.log('start ' + this.state.positionVideoRob.startRob);
     // console.log('end ' + this.state.positionVideoRob.endRob);
@@ -94,11 +94,11 @@ class HomeScreen extends Component {
       this.setState({ videoAnimationPaused: true });
     }
     //Video Rob
-    if (scrollPosition > startRob && scrollPosition < endRob && pausedRob) {
-        this.setState({ videoRobPaused: false });
-    } else if (scrollPosition < startRob || scrollPosition > endRob && !pausedRob) {
-        this.setState({ videoRobPaused: true });
-    }
+    // if (scrollPosition > startRob && scrollPosition < endRob && pausedRob) {
+    //     this.setState({ videoRobPaused: false });
+    // } else if (scrollPosition < startRob || scrollPosition > endRob && !pausedRob) {
+    //     this.setState({ videoRobPaused: true });
+    // }
    // console.log(this.state.videoAnimationPaused);
   };  
 

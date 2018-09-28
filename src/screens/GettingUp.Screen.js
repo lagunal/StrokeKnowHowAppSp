@@ -22,131 +22,65 @@ class GettingUpScreen extends Component {
     }
     
     render() {
-      // if (this.props.homeScreen === 'home') { 
-      //   return (
-      //     <View style={styles.container}>
-      //       <HeadingText>Kufungisisa {`\n`}
-      //       Thinking too much/depressed in Zimbabwe</HeadingText>
-
-      //       <ImageContainer source={kufungisisaImage} />
-
-      //       <MainText>
-      //       After my stroke, depression hit me hard. I am the youngest lawyer in the court, suddenly I could not see what my future held. 
-      //       </MainText>
-      //       <MainText>  
-      //       My wife continued my care until she had to return to her job for our income. Then my uncle and a neighbor came.
-      //       </MainText>
-
-      //       <MainText>
-      //       Three things that helped me: 
-      //       </MainText>
-
-      //       <MainText style={styles.bullets}>
-      //       {`\u2022`} The love of my wife and children. 
-      //       </MainText>
-
-      //       <MainText style={styles.bullets}>  
-      //       {`\u2022`} My best friend since childhood challenged me to reach for greater independence. 
-      //       </MainText>
-
-      //       <MainText style={[styles.bullets, {marginBottom: 0}]}>  
-      //       {`\u2022`} From a group of athletes with disabilities I learned an important lesson: ‘Don’t let anyone take away your role in the family, and the responsibilities you can handle.
-      //       </MainText>
-
-      //       <PictureLegend >&mdash; R.W., Zimbabwe, Africa</PictureLegend>
-
-      //       <ImageContainer source={skinImage} />
-
-      //       <MainText style={{marginBottom: 0}}>
-      //       There’s no telling who or what it will be that gives you the will and determination to go forward— 
-      //       your openness that counts. 
-      //       It could be your wife or husband, children, God, friends of many years, or people you meet with similar experiences to yours.  
-      //       </MainText>
-      //       <PictureLegend >&mdash; Bill</PictureLegend>
-
-      //       <HeadingText>Getting Up {`\n`} When Feeling Down</HeadingText>
-      //       <MainText>
-      //         Advice from people who’ve been there:
-      //       </MainText>
-
-      //       <MainText>
-      //       {`\u2022`} Stress comes from what we tell ourselves. Substitute positive ‘self-talk’ for negative ones.
-      //       </MainText>
-
-      //       <MainText>
-      //       {`\u2022`} Be around people who make you feel good about yourself.  Meet at a
-      //           stroke club and aphasia group. Look for a family touched by stroke, can make a difference.
-      //       </MainText>
-
-      //       <MainText>
-      //       {`\u2022`} Sadness, impatience, loss, love, come with one another. 
-      //           Feelings are all valid, and a reaction of what you've been through. 
-      //       </MainText>           
-      //     </View>           
-      //   );
-      // }  
 
         return (
           <View style={styles.container}>
             <ScrollView>
 
-            <HeadingText>Kufungisisa {`\n`}
-            Thinking too much/depressed in Zimbabwe</HeadingText>
+                            <HeadingText>Kufungisisa {`\n`}
+                            Pensando demasiado/Deprimido en Zimbabue</HeadingText>
 
-            <Image source={kufungisisaImage} style={styles.imageDefault}/>
+                            <Image source={kufungisisaImage} style={styles.imageDefault}/>
 
-            <MainText>
-            After my stroke, depression hit me hard. I am the youngest lawyer in the court, suddenly I could not see what my future held. 
-            </MainText>
-            <MainText>  
-            My wife continued my care until she had to return to her job for our income. Then my uncle and a neighbor came.
-            </MainText>
+                            <MainText>
+                            Después del derrame cerebral, la depresión me golpeó fuerte. Soy el abogado más joven en el tribunal, de repente no pude ver lo que deparaba mi futuro.  
+                            </MainText>
+                            <MainText>  
+                            Mi esposa continuó con mi cuidado, hasta que tuvo que regresar a su trabajo para obtener nuestros ingresos. Entonces llegaron mi tío y un vecino.
+                            </MainText>
 
-            <MainText>
-            Three things that helped me: 
-            </MainText>
+                            <MainText>
+                            Tres cosas me ayudaron: 
+                            </MainText>
 
-            <MainText style={styles.bullets}>
-            {`\u2022`} The love of my wife and children. 
-            </MainText>
+                            <MainText style={styles.bullets}>
+                            {`\u2022`} El amor de mi esposa e hijos. 
+                            </MainText>
 
-            <MainText style={styles.bullets}>  
-            {`\u2022`} My best friend since childhood challenged me to reach for greater independence. 
-            </MainText>
+                            <MainText style={styles.bullets}>  
+                            {`\u2022`} Mi mejor amigo desde la infancia me desafió a alcanzar una mayor independencia. 
+                            </MainText>
 
-            <MainText style={[styles.bullets, {marginBottom: 0}]}>  
-            {`\u2022`} From a group of athletes with disabilities I learned an important lesson: ‘Don’t let anyone take away your role in the family, and the responsibilities you can handle.
-            </MainText>
+                            <MainText style={[styles.bullets, {marginBottom: 0}]}>  
+                            {`\u2022`} De un grupo de atletas con discapacidades aprendí una lección importante: No permita que nadie le quite su papel en la familia y las responsabilidades que puede manejar.
+                            </MainText>
 
-            <PictureLegend >&mdash; R.W., Zimbabwe, Africa</PictureLegend>
+                            <PictureLegend >&mdash; R.W., Zimbabwe, Africa</PictureLegend>
 
-            <Image source={skinImage} style={styles.imageGetting}/>
+                            <Image source={skinImage} style={styles.imageGetting}/>
 
-            <MainText style={{marginBottom: 0}}>
-            There’s no telling who or what it will be that gives you the will and determination to go forward— 
-            your openness that counts. 
-            It could be your wife or husband, children, God, friends of many years, or people you meet with similar experiences to yours.  
-            </MainText>
-            <PictureLegend >&mdash; Bill</PictureLegend>
+                            <MainText style={{marginBottom: 0}}>
+                            No hay forma de decir quién o qué será lo que le da la voluntad y la determinación de seguir adelante – su apertura es lo que cuenta.  
+                            Podría ser su esposa o esposo, hijos, Dios, amigos de muchos años o personas con las que se encuentre con experiencias similares a las suyas.   
+                            </MainText>
+                            <PictureLegend >&mdash; Bill</PictureLegend>
 
-            <HeadingText>Getting Up {`\n`} When Feeling Down</HeadingText>
-            <MainText>
-              Advice from people who’ve been there:
-            </MainText>
+                            <HeadingText>Levantar el ánimo {`\n`} Cuando se Siente Deprimido</HeadingText>
+                            <MainText>
+                                Consejos de personas que han estado allí:
+                            </MainText>
 
-            <MainText>
-            {`\u2022`} Stress comes from what we tell ourselves. Substitute positive ‘self-talk’ for negative ones.
-            </MainText>
+                            <MainText>
+                            {`\u2022`} El estrés proviene de lo que nos decimos a nosotros mismos. Sustituir el "diálogo interno" negativo por uno positivo.
+                            </MainText>
 
-            <MainText>
-            {`\u2022`} Be around people who make you feel good about yourself.  Meet at a
-                stroke club and aphasia group. Look for a family touched by stroke, can make a difference.
-            </MainText>
+                            <MainText>
+                            {`\u2022`} Mantente rodeado de personas que te hacen sentir bien contigo mismo. Reúnase en un club de derrame cerebral o un grupo de afasia. Busque una familia que ha experimentado un derrame cerebral, esto puede marcar la diferencia.
+                            </MainText>
 
-            <MainText>
-            {`\u2022`} Sadness, impatience, loss, love, come with one another. 
-                Feelings are all valid, and a reaction of what you've been through. 
-            </MainText>
+                            <MainText>
+                            {`\u2022`} Tristeza, impaciencia, pérdida, amor, vienen el uno con el otro. Los sentimientos son todos válidos y una reacción de lo que te ha ocurrido. 
+                            </MainText>           
             
             </ScrollView>                
           </View>           

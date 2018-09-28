@@ -37,187 +37,91 @@ class WeeklyPlanScreen extends Component {
   }
 
   render() {
-    // if (this.props.homeScreen === 'home') {
-    //   return (
-    //     <View style={styles.container}>
-
-    //           <LinkToolkitWrapper 
-    //             text={'Share Help Needed Toolkit with family. Click Toolkit.'}
-    //             source={helpNeededIcon}
-    //             onPress={this.props.pressHelp ? this.props.pressHelp : this.handleHelpNeeded}
-    //           />
-              
-              
-    //           <HeadingText>Let's Talk About Safety</HeadingText>
-              
-
-    //           <ImageContainer source={safetyImage} orientation={'portrait'} />
-
-    //           <MainText>
-    //               Pat became a wheelchair user after a car crash. 
-    //               Her husband, Bill made their home safer and accessible.     
-    //           </MainText>
-    //           <MainText style={styles.bullets}>      
-    //               {`\u2022`} To widen the door opening for Pat’s wheelchair, the molding was removed.    
-    //           </MainText>
-    //           <MainText style={styles.bullets}>      
-    //               {`\u2022`} Light switches, toilet-tissue dispensers, towel racks to be easily reached were lowered. 
-    //           </MainText>
-    //           <MainText style={styles.bullets}>      
-    //               {`\u2022`} A raised toilet makes transfers easier. 
-    //               A grab bar, and on side of the toilet ensure safer transfers.   
-    //           </MainText>
-    //           <MainText style={styles.bullets}>      
-    //               {`\u2022`} The mirrored medicine cabinet was lowered.   
-    //           </MainText>
-    //           <MainText>
-    //               Falls are the #1 cause of home injuries. Wet bathroom floors lead 
-    //               home injuries. Millions return to hospitals a month after discharge.     
-    //           </MainText>
-
-              
-    //               <HeadingText>A Weekly Plan</HeadingText>
-              
-
-    //           <ImageContainer source={familyPlanImage} orientation={'portrait'} style={{height: hp('45%')}}/>
-              
-    //           <MainText>
-    //               Rachel’s granddaughter shows her how to organize a weekly schedule. Tel Aviv, Israel.  
-    //           </MainText>
-
-               
-    //             <SubHeadingText>Benefits of a Weekly Schedule</SubHeadingText>
-            
-    //           <MainText style={styles.bullets}>      
-    //               {`\u2022`} Keeping track of time organizes each day. Prioritize what you need to take place, and give it a time.  
-    //           </MainText>
-    //           <MainText style={styles.bullets}>  
-    //               {`\u2022`} Have stimulating times, others in between, that are quiet — to sit down, nap, simply relax.    
-    //           </MainText>
-
-    //           <LinkToolkitWrapper 
-    //             text={'Share Weekly Schedule Toolkit with family. Click toolkit'}
-    //             source={weeklyScheduleIcon}
-    //             onPress={this.props.pressSchedule ? this.props.pressSchedule : this.handleSchedule}
-    //           />
-
-    //         <MainText style={styles.bullets}>
-    //         {`\u2022`} After a stroke, each family looks at the care, their living and medical expenses needed, and how each one will help.   
-    //         </MainText>
-    //         <MainText style={styles.bullets}> 
-    //         {`\u2022`} Ask a physical therapist to evaluate the ability to move, talk, understand, handle personal care. 
-    //         </MainText>
-    //         <MainText style={styles.bullets}>
-    //         {`\u2022`} A psychologist can evaluate the emotional affects, and ways the family can cope with the changes.
-    //         </MainText>
-
-          
-    //       <HeadingText>
-    //         Personal Cleanliness
-    //       </HeadingText>
-          
-
-    //       <MainText style={styles.bullets}> 
-    //       {`\u2022`} To prevent infection, protect skin, and for comfort, a loved one needs to be washed or bathed every day with warm water and soap. 
-    //                 Dry, then massaged with soothing lotion. 
-    //       </MainText>
-
-    //       <MainText style={styles.bullets}>  
-    //       {`\u2022`} All family members, helpers must wash their hands frequently – after using bathroom, before eating.
-    //       </MainText>
-
-    //     </View>
-    //   );
-    // }  
-
+ 
         return (
           <View style={styles.container}>
             <ScrollView>
 
                 <LinkToolkitWrapper 
-                  text={'Share Help Needed Toolkit with family. Click Toolkit.'}
+                  text={'Comparte con la familia el Formulario de Ayuda Necesaria (haga click abajo).'}
                   source={helpNeededIcon}
                   onPress={this.props.pressHelp ? this.props.pressHelp : this.handleHelpNeeded}
                 />
                 
                 
-                <HeadingText>Let's Talk About Safety</HeadingText>
+                <HeadingText>Hablemos de Seguridad</HeadingText>
                 
 
                 <Image source={safetyImage} style={styles.imagePat}/>
 
-                <MainText>
-                    Pat became a wheelchair user after a car crash. 
-                    Her husband, Bill made their home safer and accessible.     
-                </MainText>
-                <MainText style={styles.bullets}>      
-                    {`\u2022`} To widen the door opening for Pat’s wheelchair, the molding was removed.    
-                </MainText>
-                <MainText style={styles.bullets}>      
-                    {`\u2022`} Light switches, toilet-tissue dispensers, towel racks to be easily reached were lowered. 
-                </MainText>
-                <MainText style={styles.bullets}>      
-                    {`\u2022`} A raised toilet makes transfers easier. 
-                    A grab bar, and on side of the toilet ensure safer transfers.   
-                </MainText>
-                <MainText style={styles.bullets}>      
-                    {`\u2022`} The mirrored medicine cabinet was lowered.   
-                </MainText>
-                <MainText>
-                    Falls are the #1 cause of home injuries. Wet bathroom floors lead 
-                    home injuries. Millions return to hospitals a month after discharge.     
-                </MainText>
+               <MainText>
+                        Pat se convirtió en usuaria de silla de ruedas después de un accidente automovilístico. Su esposo, Bill hizo su hogar más seguro y accesible. 
+                    </MainText>
+                    <MainText style={styles.bullets}>      
+                        {`\u2022`} Para ensanchar la abertura de la puerta para la silla de ruedas de Pat, se eliminó la moldura.    
+                    </MainText>
+                    <MainText style={styles.bullets}>      
+                        {`\u2022`} Se bajó la altura de los interruptores de luz, dispensadores de papel higiénico y toalleros, para ser alcanzados fácilmente.
+                    </MainText>
+                    <MainText style={styles.bullets}>      
+                        {`\u2022`} Un inodoro elevado facilita las transferencias. Una barra de agarre al lado del inodoro garantiza transferencias más seguras.
+                    </MainText>
+                    <MainText style={styles.bullets}>      
+                        {`\u2022`} El botiquín con espejo también se bajó. 
+                    </MainText>
+                    <MainText>
+                        Las caídas son la causa #1 de las lesiones en el hogar. Los pisos mojados del  baño generan lesiones en el hogar. Millones de personas regresan a los hospitales un mes después del alta.  
+                    </MainText>
 
-                
-                    <HeadingText>A Weekly Plan</HeadingText>
+
+                    <HeadingText>Un Plan Semanal</HeadingText>
                 
 
                 <Image source={familyPlanImage} style={styles.imageWeekly}/>
                 
                 <MainText>
-                    Rachel’s granddaughter shows her how to organize a weekly schedule. Tel Aviv, Israel.  
+                        La nieta de Rachel le muestra cómo organizar un horario semanal. Tel Aviv, Israel.  
                 </MainText>
 
                  
-                  <SubHeadingText>Benefits of a Weekly Schedule</SubHeadingText>
-              
+                 <SubHeadingText>Beneficios de un Horario Semanal</SubHeadingText>
+
                 <MainText style={styles.bullets}>      
-                    {`\u2022`} Keeping track of time organizes each day. Prioritize what you need to take place, and give it a time.  
+                    {`\u2022`} Haciendo un seguimiento del tiempo se organiza cada día Dale prioridad a lo que necesitas llevar a cabo y asígnale un tiempo
                 </MainText>
                 <MainText style={styles.bullets}>  
-                    {`\u2022`} Have stimulating times, others in between, that are quiet — to sit down, nap, simply relax.    
+                    {`\u2022`} Ten tiempos estimulantes, con intermedios de tiempos tranquilos, como: sentarse, tomar una siesta, simplemente relajarte.     
                 </MainText>
 
-                <LinkToolkitWrapper 
-                  text={'Share Weekly Schedule Toolkit with family. Click toolkit'}
-                  source={weeklyScheduleIcon}
-                  onPress={this.props.pressSchedule ? this.props.pressSchedule : this.handleSchedule}
+               <LinkToolkitWrapper 
+                      text={'Comparte con la familia el Formulario de Horario Semanal. (haga click abajo).'}
+                      source={weeklyScheduleIcon}
+                      onPress={this.handleSchedule}
                 />
 
               <MainText style={styles.bullets}>
-              {`\u2022`} After a stroke, each family looks at the care, their living and medical expenses needed, and how each one will help.   
+              {`\u2022`} Después de un derrame cerebral, cada familia pone atención al cuidado, los gastos médicos y de vida que son necesarios y cómo cada uno ayudará.   
               </MainText>
               <MainText style={styles.bullets}> 
-              {`\u2022`} Ask a physical therapist to evaluate the ability to move, talk, understand, handle personal care. 
+              {`\u2022`} Pídale a un fisioterapeuta que evalúe la capacidad de moverse, hablar, comprender y manejar el cuidado personal. 
               </MainText>
               <MainText style={styles.bullets}>
-              {`\u2022`} A psychologist can evaluate the emotional affects, and ways the family can cope with the changes.
+              {`\u2022`} Un psicólogo puede evaluar los afectos emocionales y las formas en que la familia puede hacer frente a los cambios.
               </MainText>
 
-            
-            <HeadingText>
-              Personal Cleanliness
-            </HeadingText>
+
+              <HeadingText>
+              Limpieza Personal
+              </HeadingText>
             
 
-            <MainText style={styles.bullets}> 
-            {`\u2022`} To prevent infection, protect skin, and for comfort, a loved one needs to be washed or bathed every day with warm water and soap. 
-                      Dry, then massaged with soothing lotion. 
-            </MainText>
+              <MainText style={styles.bullets}> 
+              {`\u2022`} Para prevenir infecciones, proteger la piel y por comodidad, el ser querido necesita ser lavado o bañado todos los días, con agua tibia y jabón. Secar, luego dar masaje con una loción  calmante. 
+              </MainText>
 
-            <MainText style={styles.bullets}>  
-            {`\u2022`} All family members, helpers must wash their hands frequently – after using bathroom, before eating.
-            </MainText>
+              <MainText style={styles.bullets}>  
+              {`\u2022`} Todos los miembros de la familia y los ayudantes, deben lavarse las manos con frecuencia; después de usar el baño, y antes de comer.
+              </MainText> 
 
             
 

@@ -21,41 +21,6 @@ class NewDayScreen extends Component {
 
 
   render() {
-    // if (this.props.homeScreen === true) { 
-    //   return (
-    //     <View style={styles.container}>
-        
-    //       <StatusBar
-    //           barStyle="light-content"
-    //       />    
-  
-    //       <ImageContainer source={require('../assets/home.png')} />  
-    //       <MainText style={{marginBottom: 0}}>    
-    //           I was a sports writer of a major newspaper,  who had a stroke in a New York subway during rush hour.  In the ambulance, 
-    //           I overheard the word ‘stroke,’ and realized they were talking about me. 
-    //           Out of the hospital in five days: I could stand, not walk.
-    //           Insurance paid for a handful of physical therapy. NOW WHAT?
-    //       </MainText>
-    //       <PictureLegend >&mdash; Mike</PictureLegend>    
-          
-    //       <HeadingText>A New Day</HeadingText>
-          
-    //       <ImageContainer source={require('../assets/newDay.png')} />
-          
-    //       <MainText style={styles.bullets}>
-    //           {`\u2022`} It’s important to get out of bed and dress every day. Complete bed rest deconditions the body. Lowers the capacity of heart’s pumping rate, reduces lung capacity, alters blood pressure, increases chance 
-    //           of pneumonia. 
-    //       </MainText>
-    //       <MainText style={styles.bullets}>  
-    //           {`\u2022`} Do slow stretches in bed to ease stiffness. Roll from side to side. 
-    //       </MainText>
-    //       <MainText style={styles.bullets}>  
-    //           {`\u2022`} Before moving take your time, avoid quick changes to avoid becoming dizzy.  
-    //       </MainText>
-  
-    //     </View>
-    //   );
-    // }
 
     return (
       <View style={styles.container}>
@@ -68,26 +33,26 @@ class NewDayScreen extends Component {
 
         <Image source={require('../assets/home.png')} style={styles.imageDefault}/>  
         <MainText style={{marginBottom: 0}}>    
-            I was a sports writer of a major newspaper,  who had a stroke in a New York subway during rush hour.  In the ambulance, 
-            I overheard the word ‘stroke,’ and realized they were talking about me. 
-            Out of the hospital in five days: I could stand, not walk.
-            Insurance paid for a handful of physical therapy. NOW WHAT?
+                            Yo era un escritor deportivo de un periódico importante, 
+                            padecí un derrame cerebral en un metro de Nueva York durante la hora pico. 
+                            En la ambulancia, escuché la palabra 'Derrame Cerebral' y me di cuenta de que estaban hablando de mí. 
+                            Después de cinco días estuve fuera del hospital: podía pararme, pero no caminar. 
+                            El seguro pagó solo una cantidad de terapias físicas. ¿AHORA QUE?
         </MainText>
         <PictureLegend>&mdash; Mike</PictureLegend>    
         
-        <HeadingText>A New Day</HeadingText>
+        <HeadingText>Un Nuevo Día</HeadingText>
         
         <Image source={require('../assets/newDay.png')} style={styles.imageDefault}/>
         
         <MainText style={styles.bullets}>
-            {`\u2022`} It’s important to get out of bed and dress every day. Complete bed rest deconditions the body. Lowers the capacity of heart’s pumping rate, reduces lung capacity, alters blood pressure, increases chance 
-            of pneumonia. 
+            {`\u2022`} Es importante levantarse de la cama y vestirse todos los días. El reposo completo en cama debilita el cuerpo. Reduce la capacidad  de bombeo de su corazón, reduce la capacidad pulmonar, altera la presión arterial y aumenta la posibilidad de contraer neumonía. 
         </MainText>
         <MainText style={styles.bullets}>  
-            {`\u2022`} Do slow stretches in bed to ease stiffness. Roll from side to side. 
+            {`\u2022`} Haga estiramientos suaves en la cama para aliviar la rigidez. Muévase de lado a lado. 
         </MainText>
         <MainText style={styles.bullets}>  
-            {`\u2022`} Before moving take your time, avoid quick changes to avoid becoming dizzy.  
+            {`\u2022`} Antes de moverse tome su tiempo, evite cambios rápidos para evitar marearse. 
         </MainText>
         
         </ScrollView>

@@ -37,9 +37,9 @@ class BrainBodyScreen extends Component {
     //     this.player.seek(0);
     // }
 
-    playVideo = () => {
-        this.player.presentFullscreenPlayer();
-    }
+    // playVideo = () => {
+    //     this.player.presentFullscreenPlayer();
+    // }
 
     // handleOnLoadRob = () => {
     //     this.player.seek(1);
@@ -47,201 +47,95 @@ class BrainBodyScreen extends Component {
     //     this.setState({ paused: true });
     
     // };
-    handleVideoLayout = (e) => {
-        const { height } = Dimensions.get("window");
-        //console.log('layout ' + e.nativeEvent.layout.y);
-        this.state.position.start = e.nativeEvent.layout.y + height - THRESHOLD;
-        this.state.position.end = this.state.position.start + e.nativeEvent.layout.height + THRESHOLD;
-      };
+    // handleVideoLayout = (e) => {
+    //     const { height } = Dimensions.get("window");
+    //     //console.log('layout ' + e.nativeEvent.layout.y);
+    //     this.state.position.start = e.nativeEvent.layout.y + height - THRESHOLD;
+    //     this.state.position.end = this.state.position.start + e.nativeEvent.layout.height + THRESHOLD;
+    //   };
   
-      handleScroll = (e) => {
+    //   handleScroll = (e) => {
       
-        const scrollPosition = e.nativeEvent.contentOffset.y;
-        const paused = this.state.videoRobPaused;
+    //     const scrollPosition = e.nativeEvent.contentOffset.y;
+    //     const paused = this.state.videoRobPaused;
   
-        const { start, end } = this.state.position;
+    //     const { start, end } = this.state.position;
   
-        // console.log('scroll ' + scrollPosition);
-        // console.log('start ' + this.state.position.start);
-        // console.log('end ' + this.state.position.end);
+  
+    //     //Video animation
+    //     if (scrollPosition > start && scrollPosition < end && paused) {
+    //       this.setState({ videoRobPaused: false });
+    //     } else if (
+    //       (scrollPosition > end || scrollPosition < start) && !paused
+    //     ) {
+    //       this.setState({ videoRobPaused: true });
+    //     }
     
-        //Video animation
-        if (scrollPosition > start && scrollPosition < end && paused) {
-          this.setState({ videoRobPaused: false });
-        } else if (
-          (scrollPosition > end || scrollPosition < start) && !paused
-        ) {
-          this.setState({ videoRobPaused: true });
-        }
-    
-        //console.log(this.state.videoRobPaused);
-    };  
+    //     //console.log(this.state.videoRobPaused);
+    // };  
 
     render() {
-        // if (this.props.homeScreen === 'home') { 
-        //     return (
-        //         <View style={styles.container}>
-        //           <HeadingText>Brain Body Connection</HeadingText>
-                  
-        //           <ImageContainer source={brainImage} orientation={'portrait'}/>
-                  
-        //           <MainText>
-        //           My doctor told me about research that proves after a stroke, when an area of the brain is injured, doing tasks, repeating them several times, helps healing. 
-        //                  For six months, I used both my weaker and stronger hand, washing my kitchen window, sorting laundry, polishing the table.{`\n`}
-                    
-        //           My goal was for my right hand to open and fingers to move. I kept at it, but saw no difference, {`\n`}
-        //           One morning I reached for a cup for coffee, suddenly fingers in my right hand slowly opened. I began to cry, and kept moving my fingers. 
-        //           </MainText>
-      
-        //           <PictureLegend >&mdash; Madeline, Stuttgart, Germany</PictureLegend>
-      
-        //           <MainText>
-        //               Add your tasks, use both hands, repeat them several times. 
-        //           </MainText>
-      
-        //           <MainText style={styles.bullets}>
-        //           {`\u2022`} Fold, open, re-fold items: paper napkins, clothes.
-        //           </MainText>
-      
-        //           <MainText style={styles.bullets}>
-        //           {`\u2022`} Cut/peel vegetables, fruit. Polish silverware: Wash dishes. Place cans on a shelf.
-        //           </MainText>
-      
-        //           <MainText style={styles.bullets}>
-        //           {`\u2022`} Polish silverware: Wash dishes.
-        //           </MainText>
-      
-        //           <MainText style={styles.bullets}>
-        //           {`\u2022`} Button/Unbutton shirt.
-        //           </MainText>
-      
-        //           <TouchableOpacity onPress={this.playVideo}>    
-        //               <View style={{padding: 20}}>
-        //                   <MainText><SubHeadingText style={{marginBottom: 0, fontSize: 22}}>Check VIDEO &rarr;</SubHeadingText></MainText>
-        //                   <Video
-        //                       source={{uri: "https://strokeknowhow.org/wp-content/uploads/2018/08/19_Rob_Lawyer_and_blue_grass_musician.mp4"}}
-        //                       ref={(ref) => {
-        //                           this.player = ref
-        //                       }}  
-        //                       style={{height: 300}}
-        //                       rate={1}
-        //                       paused={this.state.videoPaused}
-        //                       volume={1}
-        //                       muted={false}
-        //                       playInBackground={false}
-        //                       playWhenInactive={false}
-        //                       resizeMode='contain'
-        //                       repeat={false}
-        //                       />  
-        //               </View>
-        //           </TouchableOpacity>
-      
-        //           <HeadingText>What is Aphasia?</HeadingText>
-      
-        //           <MainText>
-        //               Aphasia is a condition that makes it difficult to say what you are thinking, or understand what is said. 
-        //               More than half of men and women after a stroke have the condition. 
-        //           </MainText>
-      
-        //           <MainText>
-        //               <Text>
-        //                   {`\u2022`} Intelligence is not affected.
-        //               </Text>    
-        //           </MainText>
-        //           <MainText style={styles.bullets}>
-        //           {`\u2022`} Relearning is ongoing: Talking, reading, writing, problem solving. 
-        //                       You keep at it, until you get back what you've lost.  
-        //           </MainText>
-      
-        //           <MainText style={styles.bullets}>
-        //           {`\u2022`} Find an Aphasia Group or a family with similar experiences. 
-        //               It can increases confidence, friendships.  
-        //           </MainText>
-            
-        //         </View>           
-        //       );
-        // }    
-
         return (
           <View style={styles.container}>
-            <ScrollView
-              scrollEventThrottle={16} 
-              onScroll={this.handleScroll}
-            >
+            <ScrollView>
+                              <HeadingText>Conexión Cerebro y Cuerpo</HeadingText>
+                              
+                              <Image source={brainImage} style={[styles.imageDefault, {height: hp('50%')}]}/>
+                              
+                              <MainText>
+                              Mi doctor me habló acerca de la investigación que demuestra que después de un derrame cerebral, cuando un área del cerebro se lesiona, realizar tareas y repetirlas varias veces, ayuda a la curación. Durante seis meses, usé tanto mi mano más débil como la fuerte, lavando mi ventana de la cocina, ordenando la ropa de lavandería y puliendo la mesa. {`\n`}
+                                
+                              Mi objetivo era que mi mano derecha se abriera y los dedos se movieran. Me mantuve en ello, pero no vi ninguna diferencia. {`\n`}
+                              Sin embargo una mañana tomé una taza de café y de repente, los dedos en mi mano derecha se abrieron lentamente. Empecé a llorar, y seguí moviendo mis dedos. 
+                              </MainText>
+                  
+                              <PictureLegend >&mdash; Madeline, Stuttgart, Germany</PictureLegend>
+                  
+                              <MainText>
+                              Agregue sus tareas, use ambas manos, repítalas varias veces.  
+                              </MainText>
+                  
+                              <MainText style={styles.bullets}>
+                              {`\u2022`} Doblar, abrir y volver a doblar los artículos: servilletas de papel, ropa.
+                              </MainText>
+                  
+                              <MainText style={styles.bullets}>
+                              {`\u2022`} Cortar/pelar vegetales, fruta. 
+                              </MainText>
 
-            <HeadingText>Brain Body Connection</HeadingText>
-            
-            <Image source={brainImage} style={[styles.imageDefault, {height: hp('50%')}]}/>
-            
-            <MainText>
-            My doctor told me about research that proves after a stroke, when an area of the brain is injured, doing tasks, repeating them several times, helps healing. 
-                   For six months, I used both my weaker and stronger hand, washing my kitchen window, sorting laundry, polishing the table.{`\n`}
-              
-            My goal was for my right hand to open and fingers to move. I kept at it, but saw no difference, {`\n`}
-            One morning I reached for a cup for coffee, suddenly fingers in my right hand slowly opened. I began to cry, and kept moving my fingers. 
-            </MainText>
+                              <MainText style={styles.bullets}>
+                              {`\u2022`} Pulir Cubiertos. 
+                              </MainText>
 
-            <PictureLegend >&mdash; Madeline, Stuttgart, Germany</PictureLegend>
+                              <MainText style={styles.bullets}>
+                              {`\u2022`} Colocar las latas en un estante. 
+                              </MainText>
 
-            <MainText>
-                Add your tasks, use both hands, repeat them several times. 
-            </MainText>
-
-            <MainText style={styles.bullets}>
-            {`\u2022`} Fold, open, re-fold items: paper napkins, clothes.
-            </MainText>
-
-            <MainText style={styles.bullets}>
-            {`\u2022`} Cut/peel vegetables, fruit. Polish silverware: Wash dishes. Place cans on a shelf.
-            </MainText>
-
-            <MainText style={styles.bullets}>
-            {`\u2022`} Button/Unbutton shirt.
-            </MainText>
-
-            <TouchableOpacity onPress={this.playVideo}>    
-                <View style={{padding: 20}}>
-                    <MainText><SubHeadingText style={{marginBottom: 0, fontSize: wp('3.5%')}}>Touch video to open full screen player &rarr;</SubHeadingText></MainText>
-                    <Video
-                        source={{uri: "https://strokeknowhow.org/wp-content/uploads/2018/08/19_Rob_Lawyer_and_blue_grass_musician.mp4"}}
-                        ref={(ref) => {
-                            this.player = ref
-                        }}  
-                        style={{height: 300}}
-                        rate={1}
-                        paused={this.state.videoRobPaused}
-                        onLayout={this.handleVideoLayout}
-                        //onLoad={this.handleOnLoadRob}
-                        //onFullscreenPlayerDidPresent={this.handleFullScreen}
-                        //volume={1}
-                        //muted={false}
-                        //playInBackground={false}
-                        //playWhenInactive={false}
-                        resizeMode='contain'
-                        repeat
-                        />  
-                </View>
-            </TouchableOpacity>
-
-            <HeadingText>What is Aphasia?</HeadingText>
-
-            <MainText>
-                Aphasia is a condition that makes it difficult to say what you are thinking, or understand what is said. 
-                More than half of men and women after a stroke have the condition. 
-            </MainText>
-
-            <MainText style={styles.bullets}>
-                    {`\u2022`} Intelligence is not affected.
-            </MainText>
-            <MainText style={styles.bullets}>
-            {`\u2022`} Relearning is ongoing: Talking, reading, writing, problem solving. 
-                        You keep at it, until you get back what you've lost.  
-            </MainText>
-
-            <MainText style={styles.bullets}>
-            {`\u2022`} Find an Aphasia Group or a family with similar experiences. 
-                It can increases confidence, friendships.  
-            </MainText>
+                              <MainText style={styles.bullets}>
+                              {`\u2022`} Lavar los platos.
+                              </MainText>
+                  
+                              <MainText style={styles.bullets}>
+                              {`\u2022`} Abotonar/desabotonar la camisa. 
+                              </MainText>
+                  
+                              <HeadingText>¿Qué es la afasia?</HeadingText>
+                  
+                              <MainText>
+                              La afasia es una condición que hace que sea difícil decir lo que se está pensando ó comprender lo que se dice. Más de la mitad de los hombres y mujeres después de un derrame cerebral, tienen esta condición. 
+                              </MainText>
+                  
+                              <MainText style={styles.bullets}>
+                              {`\u2022`} La inteligencia no se ve afectada. 
+                              </MainText>
+                              <MainText style={styles.bullets}>
+                              {`\u2022`} El re-aprendizaje es continuo: hablar, leer, escribir, resolver problemas. Sigue así, hasta que recuperes lo que has perdido.  
+                              </MainText>
+                  
+                              <MainText style={styles.bullets}>
+                              {`\u2022`} Encuentra un grupo de afasia o una familia con experiencias similares. Esto puede aumentar la confianza y fomentar las amistades.  
+                              </MainText>
+                        
 
             </ScrollView>                
           </View>           

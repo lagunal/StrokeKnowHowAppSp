@@ -23,22 +23,7 @@ import ajax from '../../ajax/ajax';
 const logoImage = require('../../assets/logo-header.jpg');
 
 class PhysicalToolkit extends Component {
-    static navigatorButtons = {
-      rightButtons: [
-          {
-          title: 'Save', // for a textual button, provide the button title (label)
-          id: 'save', // id for this button, given in onNavigatorEvent(event) to help understand which button was clicked
-          //testID: 'e2e_rules', // optional, used to locate this view in end-to-end tests
-          //disabled: (this.state.currentItem) ? false : true, // optional, used to disable the button (appears faded and doesn't interact)
-          //disableIconTint: true, // optional, by default the image colors are overridden and tinted to navBarButtonColor, set to true to keep the original image colors
-          //showAsAction: 'ifRoom', // optional, Android only. Control how the button is displayed in the Toolbar. Accepted valued: 'ifRoom' (default) - Show this item as a button in an Action Bar if the system decides there is room for it. 'always' - Always show this item as a button in an Action Bar. 'withText' - When this item is in the action bar, always show it with a text label even if it also has an icon specified. 'never' - Never show this item as a button in an Action Bar.
-          buttonColor: 'white', // Optional, iOS only. Set color for the button (can also be used in setButtons function to set different button style programatically)
-          buttonFontSize: 18, // Set font size for the button (can also be used in setButtons function to set different button style programatically)
-          buttonFontWeight: '600', // Set font weight for the button (can also be used in setButtons function to set different button style programatically)
-          //systemItem: 'save',  
-        },
-      ]
-    };
+   
 
     constructor(props){
       super(props);
@@ -126,7 +111,7 @@ class PhysicalToolkit extends Component {
                                   onPress={this.saveData}
                                   userId={this.state.user.id} 
                                   token={this.state.user.token}
-                                  navigator={this.props.navigator}
+                               
                                  />
             </View>
           )
@@ -138,57 +123,57 @@ class PhysicalToolkit extends Component {
             <View style={{flex: 1}}>
                 
                 <HeaderToolkit 
-                        title='INTERACTIVE PHYSICAL THERAPY'
-                        instructions="Type in Activities."
+                        title='FORMULARIO INTERACTIVO TERAPIA FÍSICA'
+                        instructions="Presione un cuadro para ingresar o modificar información."
                         style={{fontSize: wp('4.3%')}}
                 />
 
-                List physical activity
+                
                   <View style={[styles.containerGrid,{backgroundColor: background}]}> 
                       <View style={[styles.cell, {backgroundColor: 'white'}]}>
-                          <Text style={styles.titleMed}>Monday</Text>
+                          <Text style={styles.titleMed}>Lunes</Text>
                       </View>
                       {this.renderItems(6, 'monday')}
                   </View>
 
                   <View style={[styles.containerGrid,{backgroundColor: 'white'}]}> 
                       <View style={[styles.cell, {backgroundColor: 'white'}]}>
-                          <Text style={styles.titleMed}>Tuesday</Text>
+                          <Text style={styles.titleMed}>Martes</Text>
                       </View>
                       {this.renderItems(6, 'tuesday')}
                   </View>
 
                   <View style={[styles.containerGrid,{backgroundColor: background}]}> 
                       <View style={[styles.cell, {backgroundColor: 'white'}]}>
-                          <Text style={styles.titleMed}>Wednesday</Text>
+                          <Text style={styles.titleMed}>Miércoles</Text>
                       </View>
                       {this.renderItems(6, 'wednesday')}
                   </View>
 
                   <View style={[styles.containerGrid,{backgroundColor: 'white'}]}> 
                       <View style={[styles.cell, {backgroundColor: 'white'}]}>
-                          <Text style={styles.titleMed}>Thursday</Text>
+                          <Text style={styles.titleMed}>Jueves</Text>
                       </View>
                       {this.renderItems(6, 'thursday')}
                   </View>  
 
                   <View style={[styles.containerGrid,{backgroundColor: background}]}> 
                       <View style={[styles.cell, {backgroundColor: 'white'}]}>
-                          <Text style={styles.titleMed}>Friday</Text>
+                          <Text style={styles.titleMed}>Viernes</Text>
                       </View>
                       {this.renderItems(6, 'friday')}
                   </View>
 
                   <View style={[styles.containerGrid,{backgroundColor: 'white'}]}> 
                       <View style={[styles.cell, {backgroundColor: 'white'}]}>
-                          <Text style={styles.titleMed}>Saturday</Text>
+                          <Text style={styles.titleMed}>Sábado</Text>
                       </View>
                       {this.renderItems(6, 'saturday')}
                   </View>
 
                   <View style={[styles.containerGrid,{backgroundColor: background}]}> 
                       <View style={[styles.cell, {backgroundColor: 'white'}]}>
-                          <Text style={styles.titleMed}>Sunday</Text>
+                          <Text style={styles.titleMed}>Domingo</Text>
                       </View>
                       {this.renderItems(6, 'sunday')}
                   </View>

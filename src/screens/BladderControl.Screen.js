@@ -22,128 +22,62 @@ class BladderControlScreen extends Component {
 
 
     render() {
-      // if (this.props.homeScreen === 'home') { 
-      //   return (
-      //     <View style={styles.container}>
-
-      //           <HeadingText>Bladder Control</HeadingText>
-
-      //           <ImageContainer source={bladderImage} style={styles.image}/>
-
-      //           <MainText style={styles.bullets}>  
-      //           {`\u2022`} Ask a doctor or nurse for help in reestablishing bladder control. 
-      //                      Brain and bladder need to keep dry on your schedule.
-      //           </MainText>
-      //           <MainText style={styles.bullets}>  
-      //           {`\u2022`} At first, urinate every hour, not wait for the urge, until urination is controlled. 
-      //                      With greater control, urinate every 3 to 4 hours.  
-      //           </MainText>
-
-      //           <HeadingText>Bowel Control</HeadingText>
-
-      //           <MainText style={styles.bullets}>  
-      //           {`\u2022`} Help is needed in re-training the brain’s ability to control movements. At first, empty on a routine. 
-      //                      Then, increase the time to relieve oneself. 
-      //           </MainText>
-      //           <MainText style={styles.bullets}>  
-      //           {`\u2022`} Constipation is an effect of stroke, also caused by certain medications, aging, inactivity, and low-fiber. 
-      //           </MainText>
-
-      //           <HeadingText>Drinking Water</HeadingText>
-
-      //           <MainText>  
-      //           {`\u2022`} We depend on drinking water to live. After a stroke, swallowing may be difficult, drink sips of water often to avoid dehydration. 
-      //                     Do not use a straw.                 
-      //           </MainText>
-
-      //           <HeadingText>Swallowing</HeadingText>
-
-      //           <ImageContainer source={swallowingImage}  />
-
-      //           <MainText>  
-      //               A speech therapist or nurse can help in retraining swallowing. 
-      //           </MainText>
-      //           <MainText style={styles.bullets}>
-      //           {`\u2022`} Act quickly in a swallowing emergency. Learn CPR. 
-      //           </MainText>
-      //           <MainText style={styles.bullets}>   
-      //           {`\u2022`} After eating, check for food in cheeks, under tongue, upper palate.              
-      //           </MainText>
-
-      //           <HeadingText>Questions for a Doctor</HeadingText>
-
-      //           <MainText style={styles.bullets}>  
-      //           {`\u2022`} What should we know about the stroke? High blood pressure? Diabetes?  Numbers to report? 
-      //           </MainText>  
-      //           <MainText style={styles.bullets}>  
-      //           {`\u2022`} Side effects of medicine to report?
-      //           </MainText>
-      //           <MainText style={styles.bullets}>  
-      //           {`\u2022`} Has hospital report been sent to my other doctors?
-      //           </MainText>
-
-      //     </View>           
-      //   );
-      // }  
+  
 
         return (
           <View style={styles.container}>
             <ScrollView >
 
-                <HeadingText>Bladder Control</HeadingText>
+                <HeadingText>Control de la Vejiga</HeadingText>
 
                 <Image source={bladderImage} style={styles.image}/>
 
                 <MainText style={styles.bullets}>  
-                {`\u2022`} Ask a doctor or nurse for help in reestablishing bladder control. 
-                           Brain and bladder need to keep dry on your schedule.
+                {`\u2022`} Pídale a un médico o enfermera que lo ayude a restablecer el control de la vejiga. El cerebro y la vejiga necesitan controlar la micción en ciertos horarios.
                 </MainText>
                 <MainText style={styles.bullets}>  
-                {`\u2022`} At first, urinate every hour, not wait for the urge, until urination is controlled. 
-                           With greater control, urinate every 3 to 4 hours.  
+                {`\u2022`} Al principio, orine cada hora, no espere el impulso, hasta controlar la micción. Con mayor control, orine cada 3 a 4 horas.  
                 </MainText>
 
-                <HeadingText>Bowel Control</HeadingText>
+                <HeadingText>Control Intestinal</HeadingText>
 
                 <MainText style={styles.bullets}>  
-                {`\u2022`} Help is needed in re-training the brain’s ability to control movements. At first, empty on a routine. 
-                           Then, increase the time to relieve oneself. 
+                {`\u2022`} Se necesita ayuda para re-entrenar al cerebro en la capacidad de controlar los movimientos intestinales. Al principio, vacíe de forma rutinaria. Luego, aumente el tiempo para aliviarse. 
                 </MainText>
                 <MainText style={styles.bullets}>  
-                {`\u2022`} Constipation is an effect of stroke, also caused by certain medications, aging, inactivity, and low-fiber. 
+                {`\u2022`} El estreñimiento es un efecto del derrame cerebral, también causado por ciertos medicamentos, el envejecimiento, la inactividad y el bajo consumo de fibra. 
                 </MainText>
 
-                <HeadingText>Drinking Water</HeadingText>
+                <HeadingText>Bebiendo Agua</HeadingText>
 
                 <MainText>  
-                {`\u2022`} We depend on drinking water to live. After a stroke, swallowing may be difficult, drink sips of water often to avoid dehydration. 
-                          Do not use a straw.                 
+                {`\u2022`} Dependemos del consumo de agua para vivir. Después de un derrame cerebral, puede ser difícil tragar; beba sorbos de agua con frecuencia para evitar la deshidratación. No use una pajilla o sorbete.                 
                 </MainText>
 
-                <HeadingText>Swallowing</HeadingText>
+                <HeadingText>Tragando</HeadingText>
 
                 <Image source={swallowingImage} style={styles.imageDefault} />
 
                 <MainText>  
-                    A speech therapist or nurse can help in retraining swallowing. 
+                    Un terapeuta del habla o enfermera le pueden ayudar en el re-entrenamiento de tragar o deglutir. 
                 </MainText>
                 <MainText style={styles.bullets}>
-                {`\u2022`} Act quickly in a swallowing emergency. Learn CPR. 
+                {`\u2022`} Actúe rápidamente en una emergencia de deglución. Aprenda RCP. 
                 </MainText>
                 <MainText style={styles.bullets}>   
-                {`\u2022`} After eating, check for food in cheeks, under tongue, upper palate.              
+                {`\u2022`} Después de comer, revise si tiene comida en las mejillas, debajo de la lengua, en la parte superior del paladar.              
                 </MainText>
 
-                <HeadingText>Questions for a Doctor</HeadingText>
+                <HeadingText>Preguntas para Hacerle a su Doctor</HeadingText>
 
                 <MainText style={styles.bullets}>  
-                {`\u2022`} What should we know about the stroke? High blood pressure? Diabetes?  Numbers to report? 
+                {`\u2022`} ¿Qué debemos saber sobre el derrame cerebral? ¿Presión arterial alta? ¿Diabetes? ¿Números para informar?
                 </MainText>  
                 <MainText style={styles.bullets}>  
-                {`\u2022`} Side effects of medicine to report?
+                {`\u2022`} ¿Efectos secundarios de la medicina para reportar?
                 </MainText>
                 <MainText style={styles.bullets}>  
-                {`\u2022`} Has hospital report been sent to my other doctors?
+                {`\u2022`} ¿Ha sido enviado mi informe del hospital a mis otros doctores?
                 </MainText>
 
             </ScrollView>                

@@ -27,22 +27,7 @@ import ajax from '../../ajax/ajax';
 const logoImage = require('../../assets/logo-header.jpg');
 
 class EmergencyToolkit extends Component {
-    static navigatorButtons = {
-      rightButtons: [
-          {
-          title: 'Save', // for a textual button, provide the button title (label)
-          id: 'save', // id for this button, given in onNavigatorEvent(event) to help understand which button was clicked
-          //testID: 'e2e_rules', // optional, used to locate this view in end-to-end tests
-          //disabled: (this.state.currentItem) ? false : true, // optional, used to disable the button (appears faded and doesn't interact)
-          //disableIconTint: true, // optional, by default the image colors are overridden and tinted to navBarButtonColor, set to true to keep the original image colors
-          //showAsAction: 'ifRoom', // optional, Android only. Control how the button is displayed in the Toolbar. Accepted valued: 'ifRoom' (default) - Show this item as a button in an Action Bar if the system decides there is room for it. 'always' - Always show this item as a button in an Action Bar. 'withText' - When this item is in the action bar, always show it with a text label even if it also has an icon specified. 'never' - Never show this item as a button in an Action Bar.
-          buttonColor: 'white', // Optional, iOS only. Set color for the button (can also be used in setButtons function to set different button style programatically)
-          buttonFontSize: 18, // Set font size for the button (can also be used in setButtons function to set different button style programatically)
-          buttonFontWeight: '600', // Set font weight for the button (can also be used in setButtons function to set different button style programatically)
-          //systemItem: 'save',  
-        },
-      ]
-    };
+ 
 
     constructor(props){
       super(props);
@@ -114,11 +99,11 @@ class EmergencyToolkit extends Component {
       for (let i=1; i <= times; i++) {
           background = (i%2 == 0) ? 'white' : 'lightgrey';
           medicines.push(<ToolkitMedication 
-                            labelMedication='Medication'
+                            labelMedication='Medicamento'
                             medication={this.state.data['medication' + i]} 
-                            labelDosage='Dosage'
+                            labelDosage='Dosis'
                             dosage={this.state.data['medication_dosage' + i]} 
-                            labelPurpose='Purpose'
+                            labelPurpose='Propósito'
                             purpose={this.state.data['medication_purpose' + i]} 
                             keyId={['medication' + i ,'medication_dosage' + i, 'medication_purpose' + i]}
                             onItemPress={this.setCurrentItem}
@@ -146,7 +131,7 @@ class EmergencyToolkit extends Component {
                                   onPress={this.saveData}
                                   userId={this.state.user.id} 
                                   token={this.state.user.token}
-                                  navigator={this.props.navigator}
+                                
                                  />
             </View>
           )
@@ -157,13 +142,13 @@ class EmergencyToolkit extends Component {
           <BodyScroll>
             
             <HeaderToolkit 
-                    title='INTERACTIVE EMERGENCY INFORMATION STATION'
-                    instructions="Type in Emergency Information."
+                    title='FORMULARIO INTERACTIVO INFORMACIÓN DE EMERGENCIA'
+                    instructions="Presione una fila para ingresar o modificar información."
                     //style={{fontSize: wp('4%')}}
             />
 
             <View style={styles.labelEsential}>    
-                <MainText><SubHeadingText>ESSENTIAL INFORMATION</SubHeadingText></MainText>
+                <MainText><SubHeadingText>INFORMACIÓN ESENCIAL</SubHeadingText></MainText>
             </View>
 
             <View style={{flex: 1}}>
@@ -171,7 +156,7 @@ class EmergencyToolkit extends Component {
                   <ToolkitContactInfo 
                     label='Hospital'
                     name={this.state.data.hospital1}
-                    labelContact='Phone' 
+                    labelContact='Tel.' 
                     phone={this.state.data.hospital1_phone} 
                     keyId={['hospital1','hospital1_phone']}
                     onItemPress={this.setCurrentItem}
@@ -180,7 +165,7 @@ class EmergencyToolkit extends Component {
                   <ToolkitContactInfo 
                     label='Doctor'
                     name={this.state.data.doctor1}
-                    labelContact='Phone' 
+                    labelContact='Tel.' 
                     phone={this.state.data.doctor1_phone}
                     keyId={['doctor1','doctor1_phone']}
                     onItemPress={this.setCurrentItem}
@@ -189,43 +174,43 @@ class EmergencyToolkit extends Component {
                   <ToolkitContactInfo 
                     label='Doctor'
                     name={this.state.data.doctor2}
-                    labelContact='Phone' 
+                    labelContact='Tel.' 
                     phone={this.state.data.doctor2_phone} 
                     keyId={['doctor2','doctor2_phone']}
                     onItemPress={this.setCurrentItem}
                     backgroundColor={'lightgray'}/>
 
                   <ToolkitContactInfo 
-                    label='Dentist'
+                    label='Dentista'
                     name={this.state.data.dentist1}
-                    labelContact='Phone' 
+                    labelContact='Tel.' 
                     phone={this.state.data.dentist1_phone} 
                     keyId={['dentist1','dentist1_phone']}
                     onItemPress={this.setCurrentItem}
                     backgroundColor={'white'}/>
 
                   <ToolkitContactInfo 
-                    label='Pharmacy'
+                    label='Farmacia'
                     name={this.state.data.pharmacy1}
-                    labelContact='Phone' 
+                    labelContact='Tel.' 
                     phone={this.state.data.pharmacy1_phone}
                     keyId={['pharmacy1','pharmacy1_phone']}
                     onItemPress={this.setCurrentItem} 
                     backgroundColor={'lightgray'}/>
 
                   <ToolkitContactInfo 
-                    label='Health Insurance Plan'
+                    label='Plan de seguro de salud'
                     name={this.state.data.insurance1}
-                    labelContact='Phone' 
+                    labelContact='Tel.' 
                     phone={this.state.data.insurance1_phone} 
                     keyId={['insurance1','insurance1_phone']}
                     onItemPress={this.setCurrentItem}
                     backgroundColor={'white'}/>
 
                   <ToolkitContactInfo 
-                    label='Insurance Policy Number'
+                    label='Póliza de seguro'
                     name={this.state.data.insurance2}
-                    labelContact='Phone' 
+                    labelContact='Tel.' 
                     phone={this.state.data.insurance2_phone}
                     keyId={['insurance2','insurance2_phone']}
                     onItemPress={this.setCurrentItem}
@@ -233,18 +218,18 @@ class EmergencyToolkit extends Component {
 
 
                   <ToolkitSingleItem                 
-                    label='Medical Conditions'
+                    label='Condiciones Médicas'
                     name={this.state.data.condition1}
                     keyId={['condition1']}
                     onItemPress={this.setCurrentItem}/>
 
 
                   <View style={styles.labelContact}>
-                      <MainText><SubHeadingText style={{color: 'white'}}>CONTACT PHONE NUMBERS</SubHeadingText></MainText>
+                      <MainText><SubHeadingText style={{color: 'white'}}>NÚMEROS DE TELÉFONO DE CONTACTO</SubHeadingText></MainText>
                   </View>
 
                   <ToolkitContactInfo 
-                    label='Contact person'
+                    label='Persona de contacto'
                     name={this.state.data.contact1}
                     labelContact='Phone' 
                     phone={this.state.data.contact1_phone} 
@@ -253,7 +238,7 @@ class EmergencyToolkit extends Component {
                     backgroundColor={'lightgray'}/>
 
                   <ToolkitContactInfo 
-                    label='Contact person'
+                    label='Persona de contacto'
                     name={this.state.data.contact2}
                     labelContact='Phone' 
                     phone={this.state.data.contact2_phone} 
@@ -262,7 +247,7 @@ class EmergencyToolkit extends Component {
                     backgroundColor={'white'}/>
 
                   <ToolkitContactInfo 
-                    label='Contact person'
+                    label='Persona de contacto'
                     name={this.state.data.contact3}
                     labelContact='Phone' 
                     phone={this.state.data.contact3_phone} 
@@ -271,13 +256,13 @@ class EmergencyToolkit extends Component {
                     backgroundColor={'lightgray'}/>
 
                   <View style={styles.labelMedicine}>
-                      <MainText><SubHeadingText style={{color: 'white'}}>MEDICINE</SubHeadingText></MainText>
+                      <MainText><SubHeadingText style={{color: 'white'}}>MEDICINA</SubHeadingText></MainText>
                   </View>
 
                     {this.renderMedicines(8)}
 
                   <ToolkitSingleItem                 
-                    label='Allergies to Medications'
+                    label='Alergias a medicamentos'
                     name={this.state.data.allergies1}
                     keyId={['allergies1']}
                     onItemPress={this.setCurrentItem}

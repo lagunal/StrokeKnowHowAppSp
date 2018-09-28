@@ -29,44 +29,21 @@ class MedicationsScreen extends Component {
     }
 
     render() {
-    //   if (this.props.homeScreen === 'home') {
-    //     return (
-    //       <View style={styles.container}>
-            
-    //             <HeadingText>Organizing Medications</HeadingText>
-
-    //             <ImageContainer source={medicationsImage} />
-                
-    //             <MainText>
-    //                 Ruth, M. 78, uses a pill organizer and the Interactive Medication Toolkit. Ruth’s daughter, can also see the Toolkit.
-    //             </MainText>
-
-    //             <LinkToolkitWrapper 
-    //               text={'Share Medication toolkit with family. Click Toolkit'}
-    //               source={helpNeededIcon}
-    //               onPress={this.props.pressMedication ? this.props.pressMedication : this.handleMedication}
-    //             />
-                         
-
-    //       </View>           
-    //     );
-    // }
-
         return (
           <View style={styles.container}>
             <ScrollView> 
-                <HeadingText>Organizing Medications</HeadingText>
+                <HeadingText>Organizando Medicamentos</HeadingText>
 
                 <Image source={medicationsImage} style={styles.imageDefault} />
-                
+
                 <MainText>
-                    Ruth, M. 78, uses a pill organizer and the Interactive Medication Toolkit. Ruth’s daughter, can also see the Toolkit.
+                    Ruth, M. de 78 años, usa un organizador de píldoras y el Formulario Interactivo de Medicación. La hija de Ruth, también puede ver el Formulario.
                 </MainText>
 
                 <LinkToolkitWrapper 
-                  text={'Share Medication toolkit with family. Click Toolkit'}
+                  text={'Comparte con la familia el Formulario de Medicación. (haga click abajo).'}
                   source={medicationIcon}
-                  onPress={this.props.pressMedication ? this.props.pressMedication : this.handleMedication}
+                  onPress={this.handleMedication}
                 />
               
             </ScrollView>                    

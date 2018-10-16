@@ -124,6 +124,10 @@ class PhysicalToolkit extends Component {
                 
                 <HeaderToolkit 
                         title='FORMULARIO INTERACTIVO TERAPIA FÍSICA'
+                        directions1='Hable o escriba'
+                        directions2='Sepa que ejercicio le toca'
+                        directions3='Día y Hora'
+                        directions4='Luego guarde la información'        
                         instructions="Presione un cuadro para ingresar o modificar información."
                         style={{fontSize: wp('4.3%')}}
                 />

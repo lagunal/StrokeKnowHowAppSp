@@ -66,17 +66,20 @@ class ToolkitItemDetail extends Component {
                     <MainText><SubHeadingText>{item.labelMedication}</SubHeadingText>  </MainText>
                     <TextInput value={this.state.medication} 
                             style={styles.inputStyleToolkit}
-                            onChangeText={medication => this.setState({ medication } )} />
+                            onChangeText={medication => this.setState({ medication } )} 
+                            underlineColorAndroid={'transparent'}/>
 
                     <MainText><SubHeadingText> {item.labelDosage} </SubHeadingText> </MainText>
                     <TextInput value={this.state.dosage} 
                             style={styles.inputStyleToolkit}
-                            onChangeText={dosage => this.setState({ dosage } )}/>
+                            onChangeText={dosage => this.setState({ dosage } )}
+                            underlineColorAndroid={'transparent'}/>
 
                     <MainText><SubHeadingText> {item.labelPurpose} </SubHeadingText> </MainText>
                     <TextInput value={this.state.purpose} 
                             style={styles.inputStyleToolkit}
-                            onChangeText={purpose => this.setState({ purpose } )}/>
+                            onChangeText={purpose => this.setState({ purpose } )}
+                            underlineColorAndroid={'transparent'}/>
 
                     <Button style={{margin: 50}} color={'#ED7030'} textColor={'white'} onPress={this.handlePress}>
                        Guardar
@@ -94,11 +97,13 @@ class ToolkitItemDetail extends Component {
                         <MainText><SubHeadingText>{item.label}</SubHeadingText>  </MainText>
                         <TextInput value={this.state.name} 
                                 style={styles.inputStyleToolkit}
-                                onChangeText={name => this.setState({ name } )} />
+                                onChangeText={name => this.setState({ name } )} 
+                                underlineColorAndroid={'transparent'}/>
                         <MainText><SubHeadingText> {item.labelContact} </SubHeadingText> </MainText>
                         <TextInput value={this.state.phone} 
                                 style={styles.inputStyleToolkit}
-                                onChangeText={phone => this.setState({ phone } )}/>
+                                onChangeText={phone => this.setState({ phone } )}
+                                underlineColorAndroid={'transparent'}/>
 
                         <Button style={{margin: 50}} color={'#ED7030'} textColor={'white'} onPress={this.handlePress}>
                         Guardar
@@ -115,7 +120,8 @@ class ToolkitItemDetail extends Component {
                 <MainText><SubHeadingText>{item.label}</SubHeadingText>  </MainText>
                 <TextInput value={this.state.name} 
                         style={styles.inputStyleToolkit}
-                        onChangeText={name => this.setState({ name } )} />
+                        onChangeText={name => this.setState({ name } )} 
+                        underlineColorAndroid={'transparent'}/>
 
                 <Button style={{margin: 50}} color={'#ED7030'} textColor={'white'} onPress={this.handlePress}>
                 Guardar

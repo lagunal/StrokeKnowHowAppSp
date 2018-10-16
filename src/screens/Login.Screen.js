@@ -460,7 +460,7 @@ class LoginScreen extends Component {
             </View>}
 
             {this.state.inLogin && Platform.OS === 'android' ?
-              <View style={{height: 200}}>
+              <View style={{height: hp('10%')}}>
               </View>
               :
               <View style={{height: 0}}>

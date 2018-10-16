@@ -130,7 +130,8 @@ class MedicationDetail extends Component {
                 <MainText><SubHeadingText>Medicamento / Dosis</SubHeadingText>  </MainText>
                 <TextInput value={this.state.medicine} 
                         style={styles.inputStyleToolkit}
-                        onChangeText={medicine => this.setState({ medicine } )} />
+                        onChangeText={medicine => this.setState({ medicine } )} 
+                        underlineColorAndroid={'transparent'}/>
                 
                 <TouchableOpacity onPress={this._showDateTimePicker}>
                         <View style={styleComponent.timeContainer}> 

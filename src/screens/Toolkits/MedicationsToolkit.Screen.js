@@ -158,6 +158,11 @@ class MedicationsToolkit extends Component {
 
                 <HeaderToolkit 
                     title='FORMULARIO INTERACTIVO MEDICACIÓN'
+                    directions1='Hable o escriba'
+                    directions2='Medicina'
+                    directions3='Dosis'
+                    directions4='Selecctione el dia luego de tomarlas'
+                    directions5='Luego guarde la información'  
                     instructions="Presione una fila para ingresar o modificar información."
                     //style={{fontSize: wp('4%')}}
                 />

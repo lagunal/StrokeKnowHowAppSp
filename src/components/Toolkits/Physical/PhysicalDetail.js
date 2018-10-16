@@ -54,7 +54,8 @@ class PhysicalDetail extends Component {
                             numberOfLines = {4} 
                             value={this.state.activity} 
                             style={[styles.inputStyleToolkit, {height: hp('20%')}]}
-                            onChangeText={activity => this.setState({ activity } )} />
+                            onChangeText={activity => this.setState({ activity } )} 
+                            underlineColorAndroid={'transparent'}/>
                     <Button style={{margin: 50}} color={'#ED7030'} textColor={'white'} onPress={this.handlePress}>
                     Guardar
                     </Button>

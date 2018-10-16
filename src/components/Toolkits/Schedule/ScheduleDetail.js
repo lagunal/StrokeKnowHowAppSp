@@ -71,7 +71,8 @@ class ScheduleDetail extends Component {
                             numberOfLines = {4} 
                             value={this.state.activity} 
                             style={[styles.inputStyleToolkit, {height: hp('20%')}]}
-                            onChangeText={activity => this.setState({ activity } )} />
+                            onChangeText={activity => this.setState({ activity } )} 
+                            underlineColorAndroid={'transparent'} />
                     
                     <TouchableOpacity onPress={this._showDateTimePicker}>
                             <View style={styleComponent.dayContainer}> 

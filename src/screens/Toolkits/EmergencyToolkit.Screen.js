@@ -141,8 +141,10 @@ class EmergencyToolkit extends Component {
           <View style={styles.container}>
           <BodyScroll>
             
-            <HeaderToolkit 
+          <HeaderToolkit 
                     title='FORMULARIO INTERACTIVO INFORMACIÓN DE EMERGENCIA'
+                    directions1='Hable o escriba'
+                    directions2='Luego guarde la información'   
                     instructions="Presione una fila para ingresar o modificar información."
                     //style={{fontSize: wp('4%')}}
             />

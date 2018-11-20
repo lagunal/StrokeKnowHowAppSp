@@ -35,6 +35,7 @@ import BioScreen from './src/screens/Bio.Screen';
 import ContentsScreen from './src/screens/Contents.Screen';
 import NewDayScreen from './src/screens/NewDay.Screen';
 import ProfileScreen from './src/screens/Profile.Screen';
+import ModalCoverScreen from './src/screens/ModalCover.Screen';
 
 // Register Screens
 Navigation.registerComponent("strokeAppSp.HomeScreen", () => HomeScreen);
@@ -59,6 +60,8 @@ Navigation.registerComponent("strokeAppSp.BioScreen", () => BioScreen);
 Navigation.registerComponent("strokeAppSp.ContentsScreen", () => ContentsScreen);
 Navigation.registerComponent("strokeAppSp.ProfileScreen", () => ProfileScreen);
 Navigation.registerComponent('strokeAppSp.NewDayScreen', () => NewDayScreen);
+Navigation.registerComponent("StrokeApp.ModalCoverScreen", () => ModalCoverScreen);
+
 
 // Start a App
 //   Promise.all([
@@ -71,9 +74,7 @@ Navigation.registerComponent('strokeAppSp.NewDayScreen', () => NewDayScreen);
       
       Navigation.startSingleScreenApp({
         screen: {
-          screen: "strokeAppSp.LoginScreen",
-          title: "Login",
-
+          screen: "StrokeApp.ModalCoverScreen",
         },
       });
 //});

@@ -352,7 +352,7 @@ class LoginScreen extends Component {
               visible={this.state.modalVisible}
               onRequestClose={()=>{}}
             >
-                <Image style={styles.backgroundImage}  source={require('../assets/coverAppSpanish.jpg')}/>
+                {/* <Image style={styles.backgroundImage}  source={require('../assets/coverAppSpanish.jpg')}/> */}
             </Modal>          
 
             <Spinner visible={this.state.showSpinner} textContent={"Please wait..."} textStyle={{color: '#FFF'}} />

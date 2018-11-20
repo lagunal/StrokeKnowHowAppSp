@@ -14,29 +14,29 @@ const startTabs = () => {
             tabs: [
                 {
                     screen: "strokeAppSp.HomeScreen",
-                    label: "Principal",
+                    label: Platform.OS === 'ios' ? "Principal" : "",
                     title: "Página principal",
                     icon: sources[0],
                     
                 },
                 {
                     screen: "strokeAppSp.ContentsScreen",
-                    label: "Contenido",
+                    label: Platform.OS === 'ios' ? "Contenido" : "",
                     title: "Contenido",
                     icon: sources[2],
                 },
                 {
                     screen: "strokeAppSp.ToolkitHomeScreen",
-                    label: "Formularios",
+                    label: Platform.OS === 'ios' ? "Formularios" : "",
                     title: "Formularios Interactivos",
                     icon: sources[1],
                 },
-                {
-                    screen: "strokeAppSp.ProfileScreen",
-                    label: "Cuenta",
-                    icon: sources[3],
+                // {
+                //     screen: "strokeAppSp.ProfileScreen",
+                //     label: "Cuenta",
+                //     icon: sources[3],
                     
-                },
+                // },
             ],
             tabsStyle: { //for iOS
                 tabBarSelectedButtonColor: '#000099',

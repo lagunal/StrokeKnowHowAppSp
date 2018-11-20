@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 
 import {
-  StyleSheet, View, Text, TouchableOpacity
+  StyleSheet, View, Text, TouchableOpacity, ScrollView, AsyncStorage
 } from 'react-native';
 import Icon from "react-native-vector-icons/Ionicons";
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 import SubHeadingText from '../../components/UI/SubHeadingText';
 import MainText from "../../components/UI/MainText";
-
+import Button from '../../components/UI/Button';
+import startTabs from '../../screens/MainTabs';
 
 class ToolkitHomeScreen extends Component {
 
@@ -17,6 +18,19 @@ class ToolkitHomeScreen extends Component {
       
   }
 
+  state = {
+    user: null
+  }
+
+  async componentDidMount() {
+    try {
+      const userData = await AsyncStorage.getItem('user');
+      this.setState({ user: JSON.parse(userData) });
+    } catch (error) {
+      console.log(error);
+      alert(error);
+    }
+  }
 
   handlePressEmergency = () => {
     this.props.navigator.push({
@@ -44,11 +58,16 @@ class ToolkitHomeScreen extends Component {
     });
   }
 
+  async logOutHandler () {
+    const user = await AsyncStorage.setItem('user', '');
+    startTabs();
+  }
+
   render() {
 
     return (
       <View style={styles.container}>
-
+        <ScrollView>
                 <TouchableOpacity onPress={this.handlePressHelpNeeded}>
                     <View style={styles.item}>
                         <Icon style={styles.icon} name="ios-people" size={30} md="md-people"></Icon>    
@@ -108,6 +127,23 @@ class ToolkitHomeScreen extends Component {
                         
                     </View>
                 </TouchableOpacity> 
+                {this.state.user && 
+                    <View style={{margin: wp('2%')}}>
+                        <MainText style={{fontWeight: 'bold', alignSelf: 'center'}}>USER INFORMATION</MainText>
+                        <View style={styles.userWrapper}>
+                            <Icon size={40} name="ios-person" color={'#b30000'} style={styles.Usericon}/>
+                            <MainText style={{fontWeight: 'bold'}}>{this.state.user.displayname}</MainText>
+                        </View>
+                        <View style={styles.userWrapper}>
+                            <Icon size={40} name="ios-mail" color={'#b30000'} style={styles.Usericon}/>
+                            <MainText style={{fontWeight: 'bold'}}>{this.state.user.email}</MainText>
+                        </View>
+                        <Button color={'#b30000'} textColor={'white'} onPress={this.logOutHandler}>
+                        Logout
+                        </Button>
+                    </View>
+                }
+      </ScrollView>          
       </View>
     );
   }
@@ -134,7 +170,13 @@ const styles = StyleSheet.create({
       marginHorizontal: 10,
       color: 'white',
   },
-
+  userWrapper: {
+    flexDirection: 'row',
+    justifyContent: 'center'
+  },
+    userIcon: {
+        margin: wp('1%'),
+  }
 });
 
 

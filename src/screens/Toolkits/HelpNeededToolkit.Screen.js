@@ -15,7 +15,7 @@ import HeaderToolkit from '../../components/UI/HeaderToolkit';
 import MainText from "../../components/UI/MainText";
 import BodyScroll from "../../components/UI/BodyScroll";
 import HelpNeededRow from "../../components/Toolkits/HelpNeeded/HelpNeededRow";
-
+import Message from "../../components/UI/Message";
 import HelpNeededDetail from "../../components/Toolkits/HelpNeeded/HelpNeededDetail"
 
 import jsonData from '../../assets/json/helpNeededToolkit.json'; //json used for first time toolkit.
@@ -54,36 +54,47 @@ class HelpNeededToolkit extends Component {
     
     //get data from rest API
     async componentDidMount() {
-      //get the id from logged user
-      const userData = await AsyncStorage.getItem('user');
-      this.setState({ user: JSON.parse(userData) });
-      try {
-          const data = await ajax.getToolkit(this.state.user.id, 'helpNeeded');
-          const dataValue = data.value;
-          var dataToolkit = [];
-          if (dataValue === null) {//if toolkit is new (no data from fetch)
-             dataToolkit = jsonData; //assign "empty" json to data for toolkit
-          } else {
-            dataToolkit = dataValue; //assign existing data from toolkit
-          }
+        //get the id from logged user
+        const userData = await AsyncStorage.getItem('user');
+  
+        this.setState({ user: JSON.parse(userData) });
+        if (this.state.user === null) {
           this.setState({ 
-            isLoading: false, 
-            data: dataToolkit,
+              isLoading: false, 
+              data: jsonData,
           });
-      } catch(error) {
-        console.log(error);
+        } else {  
+              try {
+                  const data = await ajax.getToolkit(this.state.user.id, 'emergency');
+          
+                  const dataValue = data.value;
+                  var dataToolkit = [];
+                  if (dataValue === null) {//if toolkit is new (no data from fetch)
+                    dataToolkit = jsonData; //assign "empty" json to data for toolkit
+                  } else {
+                    dataToolkit = dataValue; //assign existing data from toolkit
+                  }
+                  this.setState({ 
+                    isLoading: false, 
+                    data: dataToolkit,
+                  });
+  
+              } catch(error) {
+                console.log(error);
+              }
+        }
       }
-    
-    }
 
     //function to navigate to the detail information
     setCurrentItem = (item, keyId) => {
-        this.setState({
-              currentItem: {
-                helper: item.helper,                         
-              },
-              keyId: keyId,
-        });
+        if (this.state.user !== null) {
+            this.setState({
+                currentItem: {
+                    helper: item.helper,                         
+                },
+                keyId: keyId,
+            });
+        }
     }
 
     //function that comes from child component ToolkitItemDetail, to list all items
@@ -152,7 +163,9 @@ class HelpNeededToolkit extends Component {
                     directions5='Luego guarde la información'  
                     instructions="Presione un cuadro para ingresar o modificar información."
                   />
-
+                    {this.state.user === null &&   
+                        <Message {...this.props}/>
+                    }
                   <View style={[styles.containerGrid,{backgroundColor: background}]}> 
                       <View style={[styles.cell, {backgroundColor: 'white'}]}>
                           <Text style={styles.titleMed}>Lunes</Text>

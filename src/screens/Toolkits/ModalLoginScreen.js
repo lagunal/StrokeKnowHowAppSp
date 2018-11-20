@@ -193,7 +193,7 @@ class ModalLogin extends Component {
             <TouchableOpacity disabled={this.state.enterButtonDisabled || this.state.username == "" || this.state.password == ""}
               style={styles.EMailLogin}
               onPress={ this.handlePressLogin } >
-              <Text style={{color: 'white', fontSize: 20, fontWeight: 'bold'}}>LOG IN</Text>
+              <Text style={{color: 'white', fontSize: 20, fontWeight: 'bold'}}>ENTRAR</Text>
             </TouchableOpacity>
     
           </View>;
@@ -208,7 +208,7 @@ class ModalLogin extends Component {
                 <TouchableOpacity disabled={this.state.enterButtonDisabled || this.state.email.trim() == "" || this.state.password.trim() == ""}
                 style={styles.EMailRegister}
                 onPress={this.handlePressRegister} >
-                <Text style={{color: 'white', fontSize: 20, fontWeight: 'bold'}}>JOIN IN</Text>
+                <Text style={{color: 'white', fontSize: 20, fontWeight: 'bold'}}>UNETE!</Text>
                 </TouchableOpacity>
         </View>;
     }    
@@ -237,12 +237,12 @@ class ModalLogin extends Component {
                     <Spinner visible={this.state.showSpinner} textContent={"Please wait..."}  />
                     <View >
                         <Image style={{alignSelf: 'center'}} source={require('../../assets/logo60.jpg')} resizeMode='contain' ></Image>
-                        <HeadingText style={{fontSize: hp('4%')}}>Welcome to {`\n`} StrokeKnowHow</HeadingText>
-                        <MainText style={{textAlign: 'center', fontSize: hp('3%')}}>We are a worldwide {`\n`}<Text style={{fontSize: hp('5%'), fontWeight: 'bold'}}>stroke community</Text> {`\n`} learning from one another</MainText>
+                        <HeadingText style={{fontSize: hp('4%')}}>Bienvenido a {`\n`} StrokeKnowHow</HeadingText>
+                        <MainText style={{textAlign: 'center', fontSize: hp('3%')}}>Somos una Comunidad Mundial de <Text style={{fontSize: hp('5%'), fontWeight: 'bold'}}>Derrame Cerebral</Text> {`\n`} aprendiendo unos de otros</MainText>
                     </View>
                     <View style={stylesModal.textFieldWrapper}>
                         <TextFieldInput
-                            label='Username'
+                          label='Nombre usuario'
                             style={stylesModal.textField}
                             value={this.state.username}
                             onChangeText={username => this.setState({ username })}
@@ -253,7 +253,7 @@ class ModalLogin extends Component {
                     {!this.state.inLogin &&
                     <View style={{height: hp('6%')}}>  
                         <TextFieldInput
-                        label='Family name (ex. Lopez Family)'
+                        label='Apellido Familiar (ej. Familia Lopez)'
                         style={{height: hp('7%')}}
                         value={this.state.name}
                         onChangeText={name => this.setState({ name })}
@@ -267,7 +267,7 @@ class ModalLogin extends Component {
                     {!this.state.inLogin &&
                     <View style={{height: hp('6%')}}>  
                         <TextFieldInput
-                        label='Email Address'
+                         label='Correo Electrónico'
                         style={{height: hp('7%')}}
                         value={this.state.email}
                         onChangeText={(email) => this.validateEMail(email)}
@@ -279,7 +279,7 @@ class ModalLogin extends Component {
 
                     <View style={stylesModal.textFieldWrapper}>  
                         <TextFieldInput
-                            label={'Shared Family Password'}
+                             label={this.state.inLogin ? 'Contraseña familiar' : 'Contraseña familiar (6+ carac.)'}
                             style={stylesModal.textField}
                             autoCorrect={false}
                             secureTextEntry
@@ -302,27 +302,27 @@ class ModalLogin extends Component {
                         {this.state.inLogin &&
                         <View style={{marginTop: 0, flex:1, flexDirection: 'row', justifyContent: 'center'}}>
                         {/* {this.renderButtonOrRegister()} */}
-                            <MainText>Don't have an account?</MainText>
+                            <MainText>No tienes cuenta ?</MainText>
                             <TouchableOpacity 
                                 onPress={this.onRegisterScreenButton}>
-                                <MainText style={{color: '#b30000', fontWeight: 'bold'}}>Sign up</MainText>
+                                <MainText style={{color: '#b30000', fontWeight: 'bold'}}>Unete!</MainText>
                             </TouchableOpacity>
                         </View>}
 
                         {!this.state.inLogin &&
                         <View style={{marginTop: 0, flex:1, flexDirection: 'row', justifyContent: 'center'}}>
                             {/* {this.renderButtonOrRegister()} */}
-                            <MainText>Already have an account?</MainText>
+                            <MainText>Ya tienes una cuenta ?</MainText>
                             <TouchableOpacity 
                                     onPress={this.goToLogin}>
-                                    <MainText style={{color: '#b30000', fontWeight: 'bold'}}>Log in</MainText>
+                                    <MainText style={{color: '#b30000', fontWeight: 'bold'}}>Entrar</MainText>
                             </TouchableOpacity>
                         </View>}
 
                     <View style={{marginTop: 0,  alignItems: 'center'}}>
                             <TouchableOpacity 
                                 onPress={this.props.setModalVisible}>
-                                <MainText style={{color: '#b30000', fontWeight: 'bold'}}>Go Back</MainText>
+                                <MainText style={{color: '#b30000', fontWeight: 'bold'}}>Regresar</MainText>
                             </TouchableOpacity>
                     </View>
                     </KeyboardAvoidingView>
